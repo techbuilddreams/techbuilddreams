@@ -353,8 +353,8 @@ Builds Dreams
 </h1>
 
 <p className="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed animate-fade-in-up animation-delay-300">
-Full-stack development company specializing in React SaaS platforms, mobile solutions,
-and AI integration. We help growing businesses build scalable technology that drives real results.
+Full-stack development company making enterprise-level technology accessible to businesses of all sizes.
+From simple websites to complex AI solutions - we believe every business deserves the tools to succeed.
 </p>
 
 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up animation-delay-600">
@@ -528,10 +528,11 @@ Proven methodology refined over 10 years of software engineering
 Why Tech Build Dreams?
 </h2>
 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-Founded on the belief that technology should empower people to build their dreams.
-As a software engineer with 10 years of experience and dual degrees in Computer Science
-and Information Technology, I've seen firsthand how the right technology solutions can
-transform businesses and change lives.
+Founded on the belief that technology should empower <strong>everyone</strong> to build their dreams.
+Growing up in a Latino family in Massachusetts, I earned dual degrees in Computer Science
+and Information Technology from Northern Essex Community College. With 10 years of experience,
+I've seen how the right technology can transform businesses and change lives - but access shouldn't
+depend on the size of your budget.
 </p>
 
 <div className="space-y-6 mb-8">
@@ -559,19 +560,21 @@ your product apart.</p>
 
 <div className="flex items-start">
 <div className="bg-purple-600 rounded-lg p-2 mr-4 mt-1">
-<DollarSign className="w-5 h-5 text-white"/>
+<Users className="w-5 h-5 text-white"/>
 </div>
 <div>
-<h3 className="font-semibold text-gray-900 mb-1">Monetization Ready</h3>
-<p className="text-gray-600">RevenueCat subscriptions, AdMob integration, and in-app
-purchase implementations.</p>
+<h3 className="font-semibold text-gray-900 mb-1">Accessible & Affordable</h3>
+<p className="text-gray-600">Budget-friendly solutions starting under $1K. Quality technology
+shouldn't be limited to big corporations.</p>
 </div>
 </div>
 </div>
 
 <blockquote className="border-l-4 border-blue-600 pl-6 italic text-gray-600 mb-8">
-"Every day, thanks to technological advances, people are living and building their dreams.
-I want to help businesses grow as I grow."
+"Technology has the power to level the playing field. Every business, regardless of size,
+deserves access to solutions that can transform their operations and accelerate their dreams.
+That's why Tech Build Dreams exists - to be the bridge between powerful technology and
+the businesses that need it most."
 </blockquote>
 
 <div id="stats" className="flex items-center space-x-6" ref={statsRef}>
@@ -796,11 +799,12 @@ onChange={(e) => setFormData({...formData, budget: e.target.value})}
 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
 >
 <option value="">Select range</option>
-<option value="under-10k">Under $10K</option>
+<option value="under-1k">Under $1K</option>
+<option value="1k-3k">$1K - $3K</option>
+<option value="3k-5k">$3K - $5K</option>
+<option value="5k-10k">$5K - $10K</option>
 <option value="10k-25k">$10K - $25K</option>
-<option value="25k-50k">$25K - $50K</option>
-<option value="50k-100k">$50K - $100K</option>
-<option value="over-100k">Over $100K</option>
+<option value="25k-plus">$25K+</option>
 <option value="discuss">Let's Discuss</option>
 </select>
 </div>
