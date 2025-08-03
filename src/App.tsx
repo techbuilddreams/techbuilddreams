@@ -7,7 +7,8 @@ import {
     X,
     Mail,
     MapPin,
-    Users
+    Users,
+    ExternalLink
 } from 'lucide-react';
 
 const App = () => {
@@ -64,6 +65,26 @@ const App = () => {
         }
     ];
 
+    const customers = [
+        {
+            name: "Elysi",
+            url: "https://elysi.techbuilddreams.com",
+            description: "Mobile app landing page showcasing an innovative iOS/Android application available in the App Store",
+            category: "Mobile App"
+        },
+        {
+            name: "Tabla Jaladora",
+            url: "https://tablajaladora.com",
+            description: "Mobile app landing page for a dynamic iOS/Android application featured in the App Store",
+            category: "Mobile App"
+        },
+        {
+            name: "Shender Ramos",
+            url: "https://shenderramos.com",
+            description: "Personal blog featuring insights, thoughts, and creative content",
+            category: "Personal Blog"
+        }
+    ];
 
     const processSteps = [
         {
@@ -150,6 +171,9 @@ Sent from TechBuildDreams.com contact form
                             <a href="#how-we-help" className="text-gray-600 hover:text-gray-900 font-medium">
                                 How We Help
                             </a>
+                            <a href="#customers" className="text-gray-600 hover:text-gray-900 font-medium">
+                                Our Work
+                            </a>
                             <a href="#our-process" className="text-gray-600 hover:text-gray-900 font-medium">
                                 Our Process
                             </a>
@@ -175,6 +199,7 @@ Sent from TechBuildDreams.com contact form
                     <div className="md:hidden bg-white border-t border-gray-100">
                         <div className="px-4 py-4 space-y-3">
                             <a href="#how-we-help" className="block text-gray-600 font-medium">How We Help</a>
+                            <a href="#customers" className="block text-gray-600 font-medium">Our Work</a>
                             <a href="#our-process" className="block text-gray-600 font-medium">Our Process</a>
                             <a href="#about" className="block text-gray-600 font-medium">About Us</a>
                             <button
@@ -269,6 +294,65 @@ Builds Dreams
                                 </ul>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Customers Section */}
+            <section id="customers" className="py-20 bg-white">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Our Work in Action
+                        </h2>
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                            Discover the exceptional digital experiences we've crafted for visionary clients who trusted us to bring their dreams to life.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {customers.map((customer, index) => (
+                            <div key={index}
+                                 className="group bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
+                                <div className="flex items-center justify-between mb-4">
+                                    <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                                        {customer.category}
+                                    </span>
+                                    <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors duration-300" />
+                                </div>
+
+                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                                    {customer.name}
+                                </h3>
+                                
+                                <p className="text-gray-600 mb-6 leading-relaxed">
+                                    {customer.description}
+                                </p>
+
+                                <a
+                                    href={customer.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300"
+                                >
+                                    Visit Site
+                                    <ExternalLink className="w-4 h-4 ml-2" />
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="text-center mt-12">
+                        <p className="text-gray-600 mb-6">
+                            Ready to see your vision become the next success story?
+                        </p>
+                        <button
+                            onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
+                            className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 inline-flex items-center"
+                        >
+                            <MessageSquare className="w-5 h-5 mr-2" />
+                            Start Your Project
+                        </button>
                     </div>
                 </div>
             </section>
