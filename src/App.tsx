@@ -68,7 +68,7 @@ const App = () => {
     const customers = [
         {
             name: "Elysi",
-            url: "https://elysi.techbuilddreams.com",
+            url: "https://elysi.app",
             description: "Mobile app landing page showcasing an innovative iOS/Android application available in the App Store",
             category: "Mobile App"
         },
