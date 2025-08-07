@@ -82,6 +82,30 @@ Ongoing technology leadership and support that evolves with your business ambiti
 - Executive partnership and C-level consulting
 - Scalable architecture that evolves with ambitions
 
+## 🏆 Our Work in Action
+
+We've transformed visions into reality for clients across different industries, delivering exceptional digital experiences that drive real business results:
+
+### Featured Projects
+
+**🚀 Elysi** - *Mobile App*  
+Premium iOS/Android application with elegant landing page showcasing innovative design and user experience.  
+→ [View Landing Page](https://elysi.app)
+
+**📊 Tabla Jaladora** - *Mobile App*  
+Dynamic iOS/Android application with professional web presence, delivering exceptional functionality and user engagement.  
+→ [View Landing Page](https://tablajaladora.com)
+
+**✍️ Shender Ramos** - *Personal Blog*  
+Custom blog platform featuring modern design, optimized performance, and engaging content presentation.  
+→ [Visit Blog](https://shenderramos.com)
+
+### Our Expertise Demonstrated
+- **Mobile App Development**: Complete iOS/Android solutions with App Store deployment
+- **Landing Page Design**: Professional web presence that converts visitors into users  
+- **Content Platforms**: Custom blog and content management systems
+- **Full-Stack Solutions**: End-to-end development from concept to deployment
+
 ## 🚀 Our Process: 4-Phase Excellence Framework
 
 ### 1. Discovery & Vision (1-3 weeks)
