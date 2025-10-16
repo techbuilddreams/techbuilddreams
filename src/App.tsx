@@ -30,9 +30,9 @@ const App = () => {
         },
         {
             icon: "🤖",
-            title: "Intelligent Automation",
-            description: "Cutting-edge AI integration that transforms how you operate and serve your customers.",
-            features: ["Smart customer experiences", "Process automation", "Predictive insights", "Competitive advantages"]
+            title: "AI Automation & Voice Agents",
+            description: "Never miss a call, never lose revenue. Our AI voice agents and assistants work 24/7 to capture every opportunity and scale your business.",
+            features: ["24/7 AI voice agents for calls", "Custom AI assistants for your workflow", "Automated lead capture & follow-up", "Increase revenue by eliminating missed opportunities"]
         },
         {
             icon: "🛡️",
@@ -159,12 +159,11 @@ Sent from TechBuildDreams.com contact form
             {/* Navigation */}
             <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-16">
+                    <div className="flex justify-between items-center h-24 md:h-32">
                         <div className="flex items-center">
-                            <div className="text-2xl font-bold text-gray-900">
-                                Tech<span className="text-blue-600">Build</span>Dreams
-                                <span className="text-xs text-gray-500 ml-2 font-normal">LLC</span>
-                            </div>
+                            <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="cursor-pointer">
+                                <img src="/logo.png" alt="Tech Build Dreams LLC" className="h-20 md:h-28" />
+                            </a>
                         </div>
 
                         <div className="hidden md:flex items-center space-x-8">
@@ -621,9 +620,10 @@ hover:text-blue-600 transition-colors duration-300 flex items-center justify-cen
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-4 gap-8">
                         <div className="md:col-span-2">
-                            <div className="text-2xl font-bold mb-4">
-                                Tech<span className="text-blue-400">Build</span>Dreams
-                                <span className="text-sm text-gray-400 ml-2 font-normal">LLC</span>
+                            <div className="mb-4">
+                                <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="cursor-pointer inline-block">
+                                    <img src="/logo.png" alt="Tech Build Dreams LLC" className="h-20 md:h-28" />
+                                </a>
                             </div>
                             <p className="text-gray-400 mb-6 max-w-md">
                                 Technology solutions company helping businesses build their dreams through
@@ -640,7 +640,7 @@ hover:text-blue-600 transition-colors duration-300 flex items-center justify-cen
                             <ul className="space-y-2 text-gray-400">
                                 <li>Full-Stack Development</li>
                                 <li>Mobile Solutions</li>
-                                <li>AI Integration</li>
+                                <li>AI Voice Agents & Automation</li>
                                 <li>Cloud Infrastructure</li>
                             </ul>
                         </div>
