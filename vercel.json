@@ -8,6 +8,12 @@
       "permanent": true
     }
   ],
+  "rewrites": [
+    {
+      "source": "/bmf/privacy",
+      "destination": "/bmf/privacy.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
