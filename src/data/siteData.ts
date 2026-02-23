@@ -64,6 +64,13 @@ export const values: Value[] = [
 
 export const customers: Customer[] = [
   {
+    name: 'Nurivion',
+    url: 'https://nurivion.com',
+    description:
+      'AI-powered chat assistant SaaS platform that automates customer support, lead capture, and appointment scheduling 24/7 for small businesses',
+    category: 'SaaS Platform',
+  },
+  {
     name: 'Elysi',
     url: 'https://elysi.app',
     description:
