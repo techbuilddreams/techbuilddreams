@@ -14,7 +14,7 @@ export const CustomersSection: React.FC = () => (
         subtitle="Discover the exceptional digital experiences we've crafted for visionary clients who trusted us to bring their dreams to life."
       />
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {customers.map((customer, index) => (
           <div
             key={index}
