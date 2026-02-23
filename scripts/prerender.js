@@ -64,3 +64,14 @@ console.log(
     ? 'Pre-rendering: SUCCESS — HTML contains visible page content'
     : 'Pre-rendering: WARNING — rendered HTML may be empty'
 );
+
+// Update sitemap.xml lastmod dates to current build date
+const sitemapPath = join(buildDir, 'sitemap.xml');
+const today = new Date().toISOString().split('T')[0];
+const sitemap = readFileSync(sitemapPath, 'utf-8');
+const updatedSitemap = sitemap.replace(
+  /<lastmod>[^<]+<\/lastmod>/g,
+  `<lastmod>${today}</lastmod>`
+);
+writeFileSync(sitemapPath, updatedSitemap);
+console.log(`Sitemap: updated lastmod dates to ${today}`);
