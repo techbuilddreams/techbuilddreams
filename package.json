@@ -1,6 +1,6 @@
 {
   "name": "techbuilddreams-landing",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Interactive landing page for Tech Build Dreams LLC",
   "main": "index.js",
   "scripts": {
