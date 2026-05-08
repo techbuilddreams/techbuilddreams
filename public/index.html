@@ -4,9 +4,15 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://api-smartassistant.up.railway.app" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#2563eb" />
     <meta name="description" content="Tech Build Dreams LLC crafts custom web platforms, mobile apps, AI voice agents, and strategic technology partnerships. Full-stack development for startups to enterprise — your dream is our mission." />
+    <meta name="author" content="Tech Build Dreams LLC" />
+    <meta name="geo.region" content="US-FL" />
+    <meta name="geo.placename" content="Miami, Florida" />
+    <meta name="geo.position" content="25.7617;-80.1918" />
+    <meta name="ICBM" content="25.7617, -80.1918" />
     <title>Tech Build Dreams LLC - Technology That Builds Dreams</title>
 
     <!-- Canonical URL -->
@@ -15,9 +21,13 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://techbuilddreams.com/" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:title" content="Tech Build Dreams LLC - Technology That Builds Dreams" />
     <meta property="og:description" content="Custom web platforms, mobile apps, AI voice agents, and strategic technology partnerships. From startups to enterprise — your dream is our mission." />
     <meta property="og:image" content="https://techbuilddreams.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tech Build Dreams LLC — Technology That Builds Dreams" />
     <meta property="og:site_name" content="Tech Build Dreams LLC" />
 
     <!-- Twitter Card -->
@@ -25,27 +35,185 @@
     <meta name="twitter:title" content="Tech Build Dreams LLC - Technology That Builds Dreams" />
     <meta name="twitter:description" content="Custom web platforms, mobile apps, AI voice agents, and strategic technology partnerships. From startups to enterprise — your dream is our mission." />
     <meta name="twitter:image" content="https://techbuilddreams.com/og-image.png" />
+    <meta name="twitter:image:alt" content="Tech Build Dreams LLC — Technology That Builds Dreams" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Tech Build Dreams LLC",
-      "url": "https://techbuilddreams.com",
-      "logo": "https://techbuilddreams.com/logo.png",
-      "description": "Custom web platforms, mobile apps, AI automation, and strategic technology partnerships for businesses ready to scale.",
-      "email": "info@techbuilddreams.com",
-      "areaServed": "Worldwide",
-      "knowsLanguage": ["English", "Spanish"],
-      "serviceType": ["Web Development", "Mobile App Development", "AI Automation", "Technology Consulting"]
+      "@graph": [
+        {
+          "@type": ["LocalBusiness", "ProfessionalService"],
+          "@id": "https://techbuilddreams.com/#organization",
+          "name": "Tech Build Dreams LLC",
+          "alternateName": "Tech Build Dreams",
+          "url": "https://techbuilddreams.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://techbuilddreams.com/logo.png"
+          },
+          "image": "https://techbuilddreams.com/og-image.png",
+          "description": "Custom web platforms, mobile apps, AI voice agents, and strategic technology partnerships for businesses ready to scale.",
+          "email": "info@techbuilddreams.com",
+          "foundingDate": "2023",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2125 Biscayne Blvd, Ste 204",
+            "addressLocality": "Miami",
+            "addressRegion": "FL",
+            "postalCode": "33137",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 25.7617,
+            "longitude": -80.1918
+          },
+          "areaServed": ["United States", "Latin America", "Worldwide"],
+          "knowsLanguage": ["en", "es"],
+          "priceRange": "$$$",
+          "founder": {
+            "@type": "Person",
+            "@id": "https://techbuilddreams.com/#founder",
+            "name": "Shender Ramos",
+            "jobTitle": "Founder & Lead Software Engineer",
+            "knowsLanguage": ["en", "es"],
+            "url": "https://shenderramos.com",
+            "alumniOf": {
+              "@type": "EducationalOrganization",
+              "name": "Northern Essex Community College"
+            }
+          },
+          "makesOffer": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Custom Web Development",
+                "description": "Custom React SaaS platforms and web applications with Spring Boot APIs. Typical timeline: 8–16 weeks."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Mobile App Development",
+                "description": "Native iOS apps with Swift and cross-platform Flutter applications. Typical timeline: 6–12 weeks."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI Voice Agents & Automation",
+                "description": "24/7 AI voice agents that answer calls, capture leads, and automate customer interactions. Typical timeline: 4–8 weeks."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Strategic Technology Partnership",
+                "description": "Ongoing technology leadership, proactive monitoring, consulting, and executive support for scaling businesses."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://techbuilddreams.com/#website",
+          "url": "https://techbuilddreams.com",
+          "name": "Tech Build Dreams LLC",
+          "description": "Technology That Builds Dreams — custom web platforms, mobile apps, AI voice agents, and strategic technology partnerships.",
+          "publisher": {
+            "@id": "https://techbuilddreams.com/#organization"
+          },
+          "inLanguage": ["en", "es"]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://techbuilddreams.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What services does Tech Build Dreams offer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tech Build Dreams offers custom web platform development, native iOS and Flutter mobile app development, AI voice agents and automation, and ongoing strategic technology partnerships. We serve startups through enterprise clients in both English and Spanish."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is an AI voice agent and how can it help my business?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An AI voice agent is a 24/7 automated system that answers calls, captures leads, schedules appointments, and handles customer inquiries on your behalf — so your business never misses a revenue opportunity, even outside business hours."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take to build a custom web application?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Custom web applications typically take 8–16 weeks from discovery to launch. Mobile apps take 6–12 weeks, and AI integrations take 4–8 weeks. Every project starts with a free discovery call to define scope, timeline, and investment parameters."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Tech Build Dreams work with Spanish-speaking clients?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Tech Build Dreams provides full bilingual service in English and Spanish. Founded by a Latino software engineer, we proudly serve English and Spanish-speaking clients across the US, Latin America, and worldwide."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is Tech Build Dreams located?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tech Build Dreams LLC is located at 2125 Biscayne Blvd, Suite 204, Miami, Florida 33137. We serve clients locally in Miami and South Florida, and remotely throughout the United States and internationally."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What technologies does Tech Build Dreams use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our stack includes React and Spring Boot for web applications, Swift and Flutter for mobile apps, AWS for cloud infrastructure, PostgreSQL for databases, and OpenAI APIs for AI-powered features. We select the best technology for each client's specific needs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does it cost to build a custom application?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Project investment typically ranges from $15,000 for focused digital products to $250,000+ for enterprise solutions. We also offer ongoing executive technology partnership retainers. Contact us for a transparent proposal tailored to your vision."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I get started with Tech Build Dreams?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Getting started is simple. Contact us at info@techbuilddreams.com or fill out the contact form on our website. We guarantee a response within 24 hours and offer a free 15-minute discovery call to explore your vision and project requirements."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 
     <script>(function(){const s=document.createElement('script');s.src='https://api-smartassistant.up.railway.app/static/chat-widget.js';s.defer=true;s.onload=()=>window.SmartAssistantChat.init({businessId:'7cb15d99-2f2b-49d1-8350-aba3a1e185bd',agentId:'default',apiBase:'https://api-smartassistant.up.railway.app',title:'Dreamer' });document.head.appendChild(s);})();</script>
   </head>
   <body>
-    <noscript>This page is pre-rendered for accessibility. Enable JavaScript for interactive features like the contact form and navigation.</noscript>
+    <noscript>
+      <p><strong>Tech Build Dreams LLC</strong> — Technology That Builds Dreams.</p>
+      <p>We craft custom web platforms, mobile apps, AI voice agents, and strategic technology partnerships for businesses ready to scale. From startups to enterprise — your dream is our mission.</p>
+      <p>Services: Custom Web Development · Mobile App Development · AI Voice Agents &amp; Automation · Strategic Technology Partnership</p>
+      <p>Located at 2125 Biscayne Blvd, Ste 204, Miami, Florida 33137. Bilingual service in English &amp; Spanish.</p>
+      <p>Contact: info@techbuilddreams.com</p>
+    </noscript>
     <div id="root"></div>
   </body>
 </html>

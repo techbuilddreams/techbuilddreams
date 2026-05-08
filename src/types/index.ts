@@ -31,3 +31,8 @@ export interface ContactFormData {
 }
 
 export type SubmitStatus = 'idle' | 'success' | 'error';
+
+export interface FAQ {
+  question: string;
+  answer: string;
+}

@@ -8,6 +8,7 @@ import { ProcessSection } from './components/sections/ProcessSection';
 import { AboutSection } from './components/sections/AboutSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { CtaSection } from './components/sections/CtaSection';
+import { FAQSection } from './components/sections/FAQSection';
 
 const App: React.FC = () => (
   <div className="min-h-screen bg-white">
@@ -17,6 +18,7 @@ const App: React.FC = () => (
     <CustomersSection />
     <ProcessSection />
     <AboutSection />
+    <FAQSection />
     <ContactSection />
     <CtaSection />
     <Footer />
