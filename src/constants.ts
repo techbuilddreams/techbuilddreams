@@ -5,5 +5,6 @@ export const SECTION_IDS = {
   CUSTOMERS: 'customers',
   OUR_PROCESS: 'our-process',
   ABOUT: 'about',
+  FAQ: 'faq',
   CONTACT: 'contact',
 } as const;

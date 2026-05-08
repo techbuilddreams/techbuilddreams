@@ -25,13 +25,15 @@ export const ContactSection: React.FC = () => {
           <div>
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Get In Touch</h3>
 
-            <div className="space-y-4 mb-8">
+            <address className="not-italic space-y-4 mb-8">
               <div className="flex items-center">
                 <div className="bg-blue-100 rounded-lg p-2 mr-3">
                   <Mail className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">info@techbuilddreams.com</p>
+                  <a href="mailto:info@techbuilddreams.com" className="font-medium text-gray-900 hover:text-blue-600 transition-colors duration-200">
+                    info@techbuilddreams.com
+                  </a>
                   <p className="text-gray-600 text-sm">We respond within 24 hours</p>
                 </div>
               </div>
@@ -51,11 +53,11 @@ export const ContactSection: React.FC = () => {
                   <MapPin className="w-5 h-5 text-purple-600" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">Miami, Florida</p>
-                  <p className="text-gray-600 text-sm">Local team, global solutions</p>
+                  <p className="font-medium text-gray-900">2125 Biscayne Blvd, Ste 204</p>
+                  <p className="text-gray-600 text-sm">Miami, Florida 33137 — Local team, global solutions</p>
                 </div>
               </div>
-            </div>
+            </address>
 
             <div className="bg-gray-50 rounded-lg p-6">
               <h4 className="font-semibold text-gray-900 mb-3">💡 What to Share:</h4>

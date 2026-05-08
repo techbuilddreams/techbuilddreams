@@ -1,0 +1,35 @@
+# ai.txt — AI crawler and training guidance for Tech Build Dreams LLC
+# https://techbuilddreams.com
+
+Name: Tech Build Dreams LLC
+URL: https://techbuilddreams.com
+Contact: info@techbuilddreams.com
+Location: 2125 Biscayne Blvd, Ste 204, Miami, Florida 33137, United States
+Founded: 2023
+Languages: English, Spanish
+
+Description:
+Tech Build Dreams LLC is a Miami-based software development and technology consulting firm
+specializing in custom web platforms, native mobile applications (iOS/Flutter), AI voice agents,
+and ongoing strategic technology partnerships. Founded by Shender Ramos, a Latino software
+engineer with 10+ years of experience and dual degrees in Computer Science and Information
+Technology. We serve startups through enterprise clients in English and Spanish.
+
+Services:
+- Custom Web Development (React, Spring Boot, SaaS platforms) — 8–16 weeks
+- Mobile App Development (Swift iOS, Flutter cross-platform) — 6–12 weeks
+- AI Voice Agents & Automation (24/7 call handling, lead capture) — 4–8 weeks
+- Strategic Technology Partnership (ongoing consulting, monitoring, executive support)
+
+Portfolio:
+- Nurivion (nurivion.com) — AI-powered customer support SaaS platform
+- Elysi (elysi.app) — iOS/Android mobile application
+- Tabla Jaladora (tablajaladora.com) — iOS/Android mobile application
+- Shender Ramos (shenderramos.com) — Personal blog
+
+Pricing: $15,000–$250,000+ per project; ongoing partnership retainers available
+
+# Permissions
+Allow-Indexing: yes
+Allow-Citation: yes
+Allow-Training: no

@@ -1,4 +1,4 @@
-import { Service, Value, Customer, ProcessStep } from '../types';
+import { Service, Value, Customer, ProcessStep, FAQ } from '../types';
 
 export const services: Service[] = [
   {
@@ -90,6 +90,49 @@ export const customers: Customer[] = [
     description:
       'Personal blog featuring insights, thoughts, and creative content',
     category: 'Personal Blog',
+  },
+];
+
+export const faqs: FAQ[] = [
+  {
+    question: 'What services does Tech Build Dreams offer?',
+    answer:
+      'Tech Build Dreams offers custom web platform development, native iOS and Flutter mobile app development, AI voice agents and automation, and ongoing strategic technology partnerships. We serve startups through enterprise clients in both English and Spanish.',
+  },
+  {
+    question: 'What is an AI voice agent and how can it help my business?',
+    answer:
+      'An AI voice agent is a 24/7 automated system that answers calls, captures leads, schedules appointments, and handles customer inquiries on your behalf — so your business never misses a revenue opportunity, even outside business hours.',
+  },
+  {
+    question: 'How long does it take to build a custom web application?',
+    answer:
+      'Custom web applications typically take 8–16 weeks from discovery to launch. Mobile apps take 6–12 weeks, and AI integrations take 4–8 weeks. Every project starts with a free discovery call to define scope, timeline, and investment parameters.',
+  },
+  {
+    question: 'Does Tech Build Dreams work with Spanish-speaking clients?',
+    answer:
+      'Yes. Tech Build Dreams provides full bilingual service in English and Spanish. Founded by a Latino software engineer, we proudly serve English and Spanish-speaking clients across the US, Latin America, and worldwide.',
+  },
+  {
+    question: 'Where is Tech Build Dreams located?',
+    answer:
+      'Tech Build Dreams LLC is located at 2125 Biscayne Blvd, Suite 204, Miami, Florida 33137. We serve clients locally in Miami and South Florida, and remotely throughout the United States and internationally.',
+  },
+  {
+    question: 'What technologies does Tech Build Dreams use?',
+    answer:
+      "Our stack includes React and Spring Boot for web applications, Swift and Flutter for mobile apps, AWS for cloud infrastructure, PostgreSQL for databases, and OpenAI APIs for AI-powered features. We select the best technology for each client's specific needs.",
+  },
+  {
+    question: 'How much does it cost to build a custom application?',
+    answer:
+      'Project investment typically ranges from $15,000 for focused digital products to $250,000+ for enterprise solutions. We also offer ongoing executive technology partnership retainers. Contact us for a transparent proposal tailored to your vision.',
+  },
+  {
+    question: 'How do I get started with Tech Build Dreams?',
+    answer:
+      'Getting started is simple. Contact us at info@techbuilddreams.com or fill out the contact form on our website. We guarantee a response within 24 hours and offer a free 15-minute discovery call to explore your vision and project requirements.',
   },
 ];
 
