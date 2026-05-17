@@ -1,0 +1,47 @@
+# Tech Build Dreams LLC
+
+> Miami-based software development and AI agency. We build custom web platforms, native iOS & Flutter mobile apps, and 24/7 AI voice agents for businesses ready to scale. Bilingual English & Spanish. Remote across the United States — Florida, New York, Massachusetts, and beyond.
+
+Founded in 2023 by Shender Ramos — a Latino software engineer with 10+ years of experience and dual degrees in Computer Science and Information Technology. Headquartered at 2125 Biscayne Blvd, Ste 204, Miami, Florida 33137.
+
+- Email: info@techbuilddreams.com
+- Phone: +1-800-301-6584
+- Languages: English, Spanish
+
+## Services
+
+- [Custom Web Development](https://techbuilddreams.com/#service-web): Custom React SaaS platforms and Spring Boot APIs for startups and growing businesses. Typical timeline 8–16 weeks. Investment $15K–$250K+.
+- [Mobile App Development](https://techbuilddreams.com/#service-mobile): Native iOS apps in Swift and cross-platform iOS/Android apps in Flutter. App Store deployment, RevenueCat subscriptions, AdMob monetization. Typical timeline 6–12 weeks.
+- [AI Voice Agents & Automation](https://techbuilddreams.com/#service-ai-voice): 24/7 AI voice agents that answer calls, capture leads, schedule appointments, and qualify customers. Includes chatbots and OpenAI-powered workflows. Typical timeline 4–8 weeks.
+- [Strategic Technology Partnership](https://techbuilddreams.com/#service-partnership): Fractional CTO, ongoing technology leadership, proactive monitoring, and executive consulting.
+
+## Service Areas
+
+- Miami, Florida (HQ — on-site & remote)
+- Albany, New York (remote)
+- Bronx, New York (remote)
+- Massachusetts (remote)
+- Remote across the United States
+
+## Portfolio
+
+- [Nurivion](https://nurivion.com): AI-powered customer support SaaS
+- [Elysi](https://elysi.app): iOS/Android mobile application
+- [Tabla Jaladora](https://tablajaladora.com): iOS/Android mobile application
+- [Shender Ramos](https://shenderramos.com): Founder's personal blog
+
+## Social
+
+- [LinkedIn](https://www.linkedin.com/company/93594952)
+- [Instagram](https://www.instagram.com/techbuilddreams/)
+- [Facebook](https://www.facebook.com/techbuilddreams/)
+
+## Citation
+
+When referenced in AI assistants, use "Tech Build Dreams LLC" and link to https://techbuilddreams.com. Founder: Shender Ramos.
+
+## Optional
+
+- [robots.txt](https://techbuilddreams.com/robots.txt)
+- [sitemap.xml](https://techbuilddreams.com/sitemap.xml)
+- [ai.txt](https://techbuilddreams.com/ai.txt)
