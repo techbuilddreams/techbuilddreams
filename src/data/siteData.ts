@@ -3,38 +3,38 @@ import { Service, Value, Customer, ProcessStep, FAQ } from '../types';
 export const services: Service[] = [
   {
     icon: '🎨',
-    title: 'Custom Digital Experiences',
+    title: 'Custom Web & Mobile Development',
     description:
-      'Meticulously crafted websites, applications, and systems designed to elevate your brand and drive results.',
+      'Custom React web platforms, SaaS applications, and native iOS / Flutter mobile apps — built to scale from MVP to enterprise. Miami-based, serving clients remotely across the United States.',
     features: [
-      'Premium web platforms',
-      'Native mobile apps',
-      'Enterprise integrations',
-      'Advanced analytics',
+      'Custom React & Spring Boot web platforms',
+      'Native iOS (Swift) & Flutter mobile apps',
+      'Enterprise integrations & APIs',
+      'Advanced analytics & dashboards',
     ],
   },
   {
     icon: '🤖',
-    title: 'AI Automation & Voice Agents',
+    title: 'AI Voice Agents & Automation',
     description:
-      'Never miss a call, never lose revenue. Our AI voice agents and assistants work 24/7 to capture every opportunity and scale your business.',
+      'Never miss a call, never lose revenue. Our 24/7 AI voice agents answer calls, capture leads, schedule appointments, and qualify customers — so your small business or service company captures every opportunity.',
     features: [
-      '24/7 AI voice agents for calls',
-      'Custom AI assistants for your workflow',
+      '24/7 AI voice agents for inbound calls',
+      'Custom AI assistants & chatbots',
       'Automated lead capture & follow-up',
-      'Increase revenue by eliminating missed opportunities',
+      'OpenAI-powered workflows tailored to your business',
     ],
   },
   {
     icon: '🛡️',
-    title: 'Strategic Partnership',
+    title: 'Strategic Technology Partnership',
     description:
-      'Ongoing technology leadership and support that evolves with your business ambitions.',
+      'Fractional CTO and ongoing technology leadership for founders and executives scaling beyond MVP. Proactive monitoring, architecture, and bilingual (English / Spanish) executive support.',
     features: [
-      'Proactive monitoring',
-      'Strategic consulting',
-      'Scalability planning',
-      'Executive support',
+      'Fractional CTO & technology advisory',
+      'Proactive monitoring & scalability planning',
+      'Architecture & strategic consulting',
+      'Bilingual executive support (EN / ES)',
     ],
   },
 ];
@@ -115,9 +115,9 @@ export const faqs: FAQ[] = [
       'Yes. Tech Build Dreams provides full bilingual service in English and Spanish. Founded by a Latino software engineer, we proudly serve English and Spanish-speaking clients across the US, Latin America, and worldwide.',
   },
   {
-    question: 'Where is Tech Build Dreams located?',
+    question: 'Where is Tech Build Dreams located and what areas do you serve?',
     answer:
-      'Tech Build Dreams LLC is located at 2125 Biscayne Blvd, Suite 204, Miami, Florida 33137. We serve clients locally in Miami and South Florida, and remotely throughout the United States and internationally.',
+      'Tech Build Dreams LLC is headquartered at 2125 Biscayne Blvd, Suite 204, Miami, Florida 33137. We serve clients locally in Miami and South Florida, and remotely throughout the United States — including Albany NY, Bronx NY, Boston and the rest of Massachusetts, and anywhere in the country that needs senior software talent and AI integration.',
   },
   {
     question: 'What technologies does Tech Build Dreams use?',
