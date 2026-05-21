@@ -91,6 +91,13 @@ export const customers: Customer[] = [
       'Personal blog featuring insights, thoughts, and creative content',
     category: 'Personal Blog',
   },
+  {
+    name: 'Triple I Roadside Services',
+    url: 'https://tripleiroadsideservices.com',
+    description:
+      '24/7 roadside assistance business website featuring service listings, coverage areas, and instant contact for towing, jump-starts, lockouts, and tire changes',
+    category: 'Business Website',
+  },
 ];
 
 export const faqs: FAQ[] = [
