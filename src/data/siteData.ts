@@ -98,6 +98,13 @@ export const customers: Customer[] = [
       '24/7 roadside assistance business website featuring service listings, coverage areas, and instant contact for towing, jump-starts, lockouts, and tire changes',
     category: 'Business Website',
   },
+  {
+    name: 'FlexDash',
+    url: 'https://www.flexdash.app',
+    description:
+      'Mobile app for gig economy drivers — automatic mileage tracking, AI-powered earnings scanning, bank deposit reconciliation, and Amazon Flex 40-hour cap monitoring across Uber, Lyft, DoorDash, and Instacart',
+    category: 'Mobile App',
+  },
 ];
 
 export const faqs: FAQ[] = [
