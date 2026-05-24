@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { ExternalLink, MessageSquare } from 'lucide-react';
 import { Container } from '../layout/Container';
 import { SectionHeader } from '../layout/SectionHeader';
@@ -33,15 +34,25 @@ export const CustomersSection: React.FC = () => (
 
             <p className="text-gray-600 mb-6 leading-relaxed">{customer.description}</p>
 
-            <a
-              href={customer.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300"
-            >
-              Visit Site
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
+            {customer.hasDetailPage ? (
+              <Link
+                href={`/portfolio/${customer.slug}`}
+                className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300"
+              >
+                Read Case Study
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </Link>
+            ) : (
+              <a
+                href={customer.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300"
+              >
+                Visit Site
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+            )}
           </div>
         ))}
       </div>

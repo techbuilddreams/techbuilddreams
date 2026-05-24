@@ -64,46 +64,96 @@ export const values: Value[] = [
 
 export const customers: Customer[] = [
   {
+    slug: 'nurivion',
     name: 'Nurivion',
     url: 'https://nurivion.com',
     description:
       'AI-powered chat assistant SaaS platform that automates customer support, lead capture, and appointment scheduling 24/7 for small businesses',
     category: 'SaaS Platform',
+    challenge:
+      'Small businesses were losing inbound conversations after hours and on weekends. Existing chat tools required hand-built flows and could not handle natural conversation, so they ended up as expensive contact forms.',
+    solution:
+      'Designed and built Nurivion as a multi-tenant SaaS platform: a customer-facing chat widget powered by OpenAI, a configurable agent backend, and a business-owner dashboard for transcripts, leads, and bookings. Deployed on AWS with PostgreSQL.',
+    stack: ['React', 'TypeScript', 'Spring Boot', 'PostgreSQL', 'AWS', 'OpenAI APIs'],
+    outcome:
+      'Live SaaS product serving real customers. Powers the chat widget on Tech Build Dreams itself ("Dreamer") and a growing roster of small-business clients.',
+    hasDetailPage: true,
   },
   {
-    name: 'Elysi',
-    url: 'https://elysi.app',
-    description:
-      'Mobile app landing page showcasing an innovative iOS/Android application available in the App Store',
-    category: 'Mobile App',
-  },
-  {
-    name: 'Tabla Jaladora',
-    url: 'https://tablajaladora.com',
-    description:
-      'Mobile app landing page for a dynamic iOS/Android application featured in the App Store',
-    category: 'Mobile App',
-  },
-  {
-    name: 'Shender Ramos',
-    url: 'https://shenderramos.com',
-    description:
-      'Personal blog featuring insights, thoughts, and creative content',
-    category: 'Personal Blog',
-  },
-  {
-    name: 'Triple I Roadside Services',
-    url: 'https://tripleiroadsideservices.com',
-    description:
-      '24/7 roadside assistance business website featuring service listings, coverage areas, and instant contact for towing, jump-starts, lockouts, and tire changes',
-    category: 'Business Website',
-  },
-  {
+    slug: 'flexdash',
     name: 'FlexDash',
     url: 'https://www.flexdash.app',
     description:
       'Mobile app for gig economy drivers — automatic mileage tracking, AI-powered earnings scanning, bank deposit reconciliation, and Amazon Flex 40-hour cap monitoring across Uber, Lyft, DoorDash, and Instacart',
     category: 'Mobile App',
+    challenge:
+      'Gig drivers stitching together income from Uber, Lyft, DoorDash, Instacart, and Amazon Flex had no single place to see real earnings vs. mileage vs. bank deposits — and Amazon Flex&rsquo;s 40-hour rolling cap was costing drivers blocks they did not know they were close to losing.',
+    solution:
+      'Built a cross-platform mobile app with automatic mileage tracking, OCR/AI-driven earnings scanning from screenshots, bank deposit reconciliation, and a rolling 40-hour cap monitor for Amazon Flex drivers. Designed for daily use in the car.',
+    stack: ['Flutter', 'Firebase', 'AI/OCR APIs', 'iOS & Android'],
+    outcome:
+      'Live on both App Store and Play Store. Used daily by gig drivers to maximize earnings and stay compliant with platform rules.',
+    hasDetailPage: true,
+  },
+  {
+    slug: 'triple-i-roadside',
+    name: 'Triple I Roadside Services',
+    url: 'https://tripleiroadsideservices.com',
+    description:
+      '24/7 roadside assistance business website featuring service listings, coverage areas, and instant contact for towing, jump-starts, lockouts, and tire changes',
+    category: 'Business Website',
+    challenge:
+      'A 24/7 roadside-assistance operator was relying on word of mouth and a basic listing. Drivers stranded at 2am needed a fast, mobile-first way to find services, see coverage areas, and call immediately.',
+    solution:
+      'Designed and shipped a fast, SEO-optimized business website with clear service breakdowns (towing, jump-starts, lockouts, tire changes), coverage area maps, and one-tap call-to-dispatch buttons optimized for mobile.',
+    stack: ['React', 'Static site generation', 'Vercel', 'SEO schema'],
+    outcome:
+      'Live site with structured-data-rich pages targeting local roadside-assistance queries, mobile-optimized for stranded-driver intent.',
+    hasDetailPage: true,
+  },
+  {
+    slug: 'elysi',
+    name: 'Elysi',
+    url: 'https://elysi.app',
+    description:
+      'Mobile app landing page showcasing an innovative iOS/Android application available in the App Store',
+    category: 'Mobile App',
+    challenge:
+      'A consumer mobile product needed a polished landing page and App Store presence to convert paid traffic and press mentions into installs.',
+    solution:
+      'Designed the landing page, built the marketing site, and supported the App Store and Play Store listings for both iOS and Android.',
+    stack: ['React', 'iOS', 'Android', 'App Store Connect', 'Play Console'],
+    outcome:
+      'Live on both stores with a landing page geared for install-conversion.',
+    hasDetailPage: true,
+  },
+  {
+    slug: 'tabla-jaladora',
+    name: 'Tabla Jaladora',
+    url: 'https://tablajaladora.com',
+    description:
+      'Mobile app landing page for a dynamic iOS/Android application featured in the App Store',
+    category: 'Mobile App',
+    challenge:
+      'A bilingual consumer app needed a marketing presence that converted Spanish-speaking and English-speaking visitors into installs from a single landing page.',
+    solution:
+      'Designed and built a bilingual mobile-app landing page with App Store / Play Store deep-links and conversion-focused above-the-fold copy.',
+    stack: ['React', 'iOS', 'Android', 'Bilingual UX'],
+    outcome:
+      'Live on both stores with a landing page tailored to a bilingual audience.',
+    hasDetailPage: true,
+  },
+  {
+    slug: 'shenderramos',
+    name: 'Shender Ramos',
+    url: 'https://shenderramos.com',
+    description: 'Personal blog featuring insights, thoughts, and creative content',
+    category: 'Personal Blog',
+    challenge: '',
+    solution: '',
+    stack: [],
+    outcome: '',
+    hasDetailPage: false,
   },
 ];
 
@@ -176,3 +226,11 @@ export const processSteps: ProcessStep[] = [
       'Launch with confidence and ongoing partnership to ensure your technology evolves with your ambitions.',
   },
 ];
+
+export function getCaseStudyBySlug(slug: string): Customer | undefined {
+  return customers.find((c) => c.slug === slug && c.hasDetailPage);
+}
+
+export function getCaseStudySlugs(): string[] {
+  return customers.filter((c) => c.hasDetailPage).map((c) => c.slug);
+}

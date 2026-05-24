@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Mail, Users, MapPin, CheckCircle, MessageSquare } from 'lucide-react';
 import { Container } from '../layout/Container';

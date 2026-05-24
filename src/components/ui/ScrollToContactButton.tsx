@@ -1,21 +1,16 @@
 import React from 'react';
-import { SECTION_IDS } from '../../constants';
+import Link from 'next/link';
 
-interface ScrollToContactButtonProps {
+interface ContactCtaProps {
   children: React.ReactNode;
   className?: string;
 }
 
-export const ScrollToContactButton: React.FC<ScrollToContactButtonProps> = ({
+export const ScrollToContactButton: React.FC<ContactCtaProps> = ({
   children,
   className = '',
 }) => (
-  <button
-    onClick={() =>
-      document.getElementById(SECTION_IDS.CONTACT)?.scrollIntoView({ behavior: 'smooth' })
-    }
-    className={className}
-  >
+  <Link href="/contact" className={className}>
     {children}
-  </button>
+  </Link>
 );

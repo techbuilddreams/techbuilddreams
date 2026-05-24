@@ -12,10 +12,16 @@ export interface Value {
 }
 
 export interface Customer {
+  slug: string;
   name: string;
   url: string;
   description: string;
   category: string;
+  challenge: string;
+  solution: string;
+  stack: string[];
+  outcome: string;
+  hasDetailPage: boolean;
 }
 
 export interface ProcessStep {
