@@ -111,7 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <Script id="smartassistant-chat" strategy="afterInteractive">
-          {`(function(){const s=document.createElement('script');s.src='https://api-smartassistant.up.railway.app/static/chat-widget.js';s.defer=true;s.onload=()=>window.SmartAssistantChat.init({businessId:'7cb15d99-2f2b-49d1-8350-aba3a1e185bd',agentId:'default',apiBase:'https://api-smartassistant.up.railway.app',title:'Dreamer'});document.head.appendChild(s);})();`}
+          {`(function(){const s=document.createElement('script');s.src='https://api-smartassistant.up.railway.app/static/chat-widget.js';s.defer=true;s.onload=()=>window.NurivionChat.init({businessId:'7cb15d99-2f2b-49d1-8350-aba3a1e185bd',agentId:'default',apiBase:'https://api-smartassistant.up.railway.app',title:'Dreamer'});document.head.appendChild(s);})();`}
         </Script>
       </body>
     </html>
