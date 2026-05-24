@@ -1,7 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 import { Linkedin, Instagram, Facebook, Mail, Phone } from 'lucide-react';
 import { Container } from './Container';
-import { services } from '../../data/siteData';
 import {
   COMPANY_EMAIL,
   COMPANY_PHONE,
@@ -9,20 +9,22 @@ import {
   SOCIAL_LINKS,
 } from '../../constants';
 
+const serviceLinks = [
+  { href: '/services/web-development', label: 'Custom Web Development' },
+  { href: '/services/mobile-apps', label: 'Mobile App Development' },
+  { href: '/services/ai-voice-agents', label: 'AI Voice Agents & Automation' },
+  { href: '/services/fractional-cto', label: 'Strategic Technology Partnership' },
+];
+
 export const Footer: React.FC = () => (
   <footer className="bg-gray-900 text-white py-16">
     <Container>
       <div className="grid md:grid-cols-4 gap-8">
         <div className="md:col-span-2">
           <div className="mb-4">
-            <a
-              href="#"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="cursor-pointer inline-block"
-              aria-label="Tech Build Dreams home"
-            >
+            <Link href="/" aria-label="Tech Build Dreams home" className="inline-block">
               <img src="/logo.png" alt="Tech Build Dreams LLC" className="h-20 md:h-28" />
-            </a>
+            </Link>
           </div>
           <p className="text-gray-400 mb-6 max-w-md">
             Miami-based software development and AI agency — custom web platforms, native iOS &amp;
@@ -31,19 +33,13 @@ export const Footer: React.FC = () => (
           <address className="not-italic text-gray-400 space-y-1 mb-6">
             <p className="flex items-center">
               <Mail className="w-4 h-4 mr-2" aria-hidden="true" />
-              <a
-                href={`mailto:${COMPANY_EMAIL}`}
-                className="hover:text-white transition-colors"
-              >
+              <a href={`mailto:${COMPANY_EMAIL}`} className="hover:text-white transition-colors">
                 {COMPANY_EMAIL}
               </a>
             </p>
             <p className="flex items-center">
               <Phone className="w-4 h-4 mr-2" aria-hidden="true" />
-              <a
-                href={`tel:${COMPANY_PHONE}`}
-                className="hover:text-white transition-colors"
-              >
+              <a href={`tel:${COMPANY_PHONE}`} className="hover:text-white transition-colors">
                 {COMPANY_PHONE_DISPLAY}
               </a>
             </p>
@@ -83,8 +79,12 @@ export const Footer: React.FC = () => (
         <div>
           <h3 className="font-semibold mb-4">Services</h3>
           <ul className="space-y-2 text-gray-400">
-            {services.map((service) => (
-              <li key={service.title}>{service.title}</li>
+            {serviceLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-white transition-colors">
+                  {link.label}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
@@ -96,6 +96,29 @@ export const Footer: React.FC = () => (
             <li>Albany &amp; Bronx, NY</li>
             <li>Massachusetts</li>
             <li>Remote · United States</li>
+          </ul>
+          <h3 className="font-semibold mt-6 mb-4">Company</h3>
+          <ul className="space-y-2 text-gray-400">
+            <li>
+              <Link href="/about" className="hover:text-white transition-colors">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/portfolio" className="hover:text-white transition-colors">
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="hover:text-white transition-colors">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-white transition-colors">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

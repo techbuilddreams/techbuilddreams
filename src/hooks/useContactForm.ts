@@ -32,7 +32,7 @@ export function useContactForm() {
       return;
     }
 
-    const accessKey = process.env.REACT_APP_WEB3FORMS_KEY;
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
     if (!accessKey) {
       setSubmitStatus('error');
       setStatusMessage(

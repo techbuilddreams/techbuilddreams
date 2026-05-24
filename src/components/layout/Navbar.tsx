@@ -1,14 +1,17 @@
+'use client';
+
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { Container } from './Container';
-import { ScrollToContactButton } from '../ui/ScrollToContactButton';
 import { SECTION_IDS } from '../../constants';
 
 const navLinks = [
-  { href: `#${SECTION_IDS.HOW_WE_HELP}`, label: 'How We Help' },
-  { href: `#${SECTION_IDS.CUSTOMERS}`, label: 'Our Work' },
-  { href: `#${SECTION_IDS.OUR_PROCESS}`, label: 'Our Process' },
-  { href: `#${SECTION_IDS.ABOUT}`, label: 'About Us' },
+  { href: `/#${SECTION_IDS.HOW_WE_HELP}`, label: 'How We Help' },
+  { href: '/portfolio', label: 'Our Work' },
+  { href: `/#${SECTION_IDS.OUR_PROCESS}`, label: 'Our Process' },
+  { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
 ];
 
 export const Navbar: React.FC = () => {
@@ -19,32 +22,34 @@ export const Navbar: React.FC = () => {
       <Container>
         <div className="flex justify-between items-center h-24 md:h-32">
           <div className="flex items-center">
-            <a
-              href="#"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="cursor-pointer"
-            >
+            <Link href="/" aria-label="Tech Build Dreams home">
               <img src="/logo.png" alt="Tech Build Dreams LLC" className="h-20 md:h-28" />
-            </a>
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-gray-600 hover:text-gray-900 font-medium"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <ScrollToContactButton className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 font-medium">
-              Let's Talk
-            </ScrollToContactButton>
+            <Link
+              href="/contact"
+              className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 font-medium"
+            >
+              Let&rsquo;s Talk
+            </Link>
           </div>
 
           <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -55,13 +60,22 @@ export const Navbar: React.FC = () => {
         <div className="md:hidden bg-white border-t border-gray-100">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="block text-gray-600 font-medium">
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block text-gray-600 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <ScrollToContactButton className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium">
-              Let's Talk
-            </ScrollToContactButton>
+            <Link
+              href="/contact"
+              className="block bg-blue-600 text-white px-6 py-2 rounded-full text-center font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Let&rsquo;s Talk
+            </Link>
           </div>
         </div>
       )}
