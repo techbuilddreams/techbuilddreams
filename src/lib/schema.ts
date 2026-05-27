@@ -145,7 +145,7 @@ export const websiteSchema = {
   description:
     'Technology That Builds Dreams — Miami software development, mobile app development, and AI voice agents for businesses ready to scale.',
   publisher: { '@id': ORG_ID },
-  inLanguage: ['en', 'es'],
+  inLanguage: 'en',
 };
 
 export const siteWideGraph = {

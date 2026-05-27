@@ -17,13 +17,18 @@ export const HeroSection: React.FC = () => (
       </div>
 
       <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-        Technology That
-        <span className="block text-blue-600">Builds Dreams</span>
+        Miami Software Development,
+        <span className="block text-blue-600">Mobile Apps & AI Voice Agents</span>
       </h1>
 
-      <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-        We craft exceptional technology experiences that empower businesses to achieve their
-        vision. From startups to enterprise - <strong>your dream is our mission</strong>.
+      <p className="text-xl md:text-2xl text-gray-600 mb-4 leading-relaxed max-w-3xl mx-auto">
+        Custom React web platforms, native iOS &amp; Flutter mobile apps, and 24/7 AI voice
+        agents — built by a Latino-owned, bilingual (EN/ES) engineering team. Miami-based, remote
+        across the United States.
+      </p>
+
+      <p className="text-base md:text-lg text-gray-500 italic mb-8">
+        Technology That Builds Dreams.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

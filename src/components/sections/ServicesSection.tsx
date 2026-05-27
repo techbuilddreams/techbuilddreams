@@ -9,8 +9,8 @@ export const ServicesSection: React.FC = () => (
   <section id={SECTION_IDS.HOW_WE_HELP} className="py-20 bg-gray-50">
     <Container>
       <SectionHeader
-        title="How We Help Your Business Grow"
-        subtitle="Exceptional technology solutions crafted for visionaries ready to transform their industries."
+        title="Web, Mobile & AI Services for Miami Businesses"
+        subtitle="Custom software, native mobile apps, and 24/7 AI voice agents — from MVP to enterprise, delivered remotely across the United States."
       />
 
       <div className="grid md:grid-cols-3 gap-8">
