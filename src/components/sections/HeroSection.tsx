@@ -1,9 +1,8 @@
 import React from 'react';
-import { Heart, MessageSquare, Mail } from 'lucide-react';
+import Link from 'next/link';
+import { Heart, Calendar, User } from 'lucide-react';
 import { Container } from '../layout/Container';
 import { ScrollToContactButton } from '../ui/ScrollToContactButton';
-import { EmailLink } from '../ui/EmailLink';
-import { COMPANY_EMAIL } from '../../constants';
 import { values } from '../../data/siteData';
 
 export const HeroSection: React.FC = () => (
@@ -17,24 +16,32 @@ export const HeroSection: React.FC = () => (
       </div>
 
       <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-        Technology That
-        <span className="block text-blue-600">Builds Dreams</span>
+        Miami Software Development,
+        <span className="block text-blue-600">Mobile Apps & AI Voice Agents</span>
       </h1>
 
-      <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-        We craft exceptional technology experiences that empower businesses to achieve their
-        vision. From startups to enterprise - <strong>your dream is our mission</strong>.
+      <p className="text-xl md:text-2xl text-gray-600 mb-4 leading-relaxed max-w-3xl mx-auto">
+        Custom React web platforms, native iOS &amp; Flutter mobile apps, and 24/7 AI voice
+        agents — built by a Latino-owned, bilingual (EN/ES) engineering team. Miami-based, remote
+        across the United States.
+      </p>
+
+      <p className="text-base md:text-lg text-gray-500 italic mb-8">
+        Technology That Builds Dreams.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
         <ScrollToContactButton className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center">
-          <MessageSquare className="w-5 h-5 mr-2" />
-          Let's Build Your Dream
+          <Calendar className="w-5 h-5 mr-2" />
+          Book a free 15-min discovery call
         </ScrollToContactButton>
-        <EmailLink className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-blue-500 hover:text-blue-600 transition-colors duration-300 flex items-center justify-center">
-          <Mail className="w-5 h-5 mr-2" />
-          {COMPANY_EMAIL}
-        </EmailLink>
+        <Link
+          href="/about"
+          className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-blue-500 hover:text-blue-600 transition-colors duration-300 flex items-center justify-center"
+        >
+          <User className="w-5 h-5 mr-2" />
+          Meet the founder
+        </Link>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

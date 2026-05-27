@@ -3,6 +3,8 @@ export interface Service {
   title: string;
   description: string;
   features: string[];
+  href: string;
+  timeline: string;
 }
 
 export interface Value {
