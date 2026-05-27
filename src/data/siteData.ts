@@ -3,15 +3,31 @@ import { Service, Value, Customer, ProcessStep, FAQ } from '../types';
 export const services: Service[] = [
   {
     icon: '🎨',
-    title: 'Custom Web & Mobile Development',
+    title: 'Custom Web Development',
     description:
-      'Custom React web platforms, SaaS applications, and native iOS / Flutter mobile apps — built to scale from MVP to enterprise. Miami-based, serving clients remotely across the United States.',
+      'Custom React web platforms, SaaS applications, and Spring Boot APIs — built to scale from MVP to enterprise. Miami-based, serving clients remotely across the United States.',
     features: [
-      'Custom React & Spring Boot web platforms',
-      'Native iOS (Swift) & Flutter mobile apps',
-      'Enterprise integrations & APIs',
-      'Advanced analytics & dashboards',
+      'React & TypeScript frontends',
+      'Spring Boot REST APIs',
+      'PostgreSQL & AWS infrastructure',
+      'Customer portals & internal tools',
     ],
+    href: '/services/web-development',
+    timeline: '8–16 weeks',
+  },
+  {
+    icon: '📱',
+    title: 'Mobile App Development',
+    description:
+      'Native iOS apps in Swift and cross-platform iOS/Android apps in Flutter. App Store deployment, in-app subscriptions, and analytics built in.',
+    features: [
+      'Native iOS (Swift)',
+      'Flutter cross-platform (iOS + Android)',
+      'App Store & Play Store deployment',
+      'RevenueCat subscriptions & AdMob',
+    ],
+    href: '/services/mobile-apps',
+    timeline: '6–12 weeks',
   },
   {
     icon: '🤖',
@@ -22,8 +38,10 @@ export const services: Service[] = [
       '24/7 AI voice agents for inbound calls',
       'Custom AI assistants & chatbots',
       'Automated lead capture & follow-up',
-      'OpenAI-powered workflows tailored to your business',
+      'OpenAI-powered workflows',
     ],
+    href: '/services/ai-voice-agents',
+    timeline: '4–8 weeks',
   },
   {
     icon: '🛡️',
@@ -36,6 +54,8 @@ export const services: Service[] = [
       'Architecture & strategic consulting',
       'Bilingual executive support (EN / ES)',
     ],
+    href: '/services/fractional-cto',
+    timeline: 'Ongoing retainer',
   },
 ];
 

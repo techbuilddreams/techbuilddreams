@@ -7,8 +7,8 @@ import { AboutSection } from '@/components/sections/AboutSection';
 import { FAQSection } from '@/components/sections/FAQSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { CtaSection } from '@/components/sections/CtaSection';
-import { faqs } from '@/data/siteData';
-import { faqPageSchema, breadcrumbSchema } from '@/lib/schema';
+import { faqs, customers } from '@/data/siteData';
+import { faqPageSchema, breadcrumbSchema, portfolioItemListSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -18,6 +18,16 @@ const homeFaqSchema = faqPageSchema(faqs);
 const homeBreadcrumb = breadcrumbSchema([
   { name: 'Home', url: '/' },
 ]);
+const homePortfolioList = portfolioItemListSchema(
+  customers.map((c) => ({
+    name: c.name,
+    url: c.url,
+    description: c.description,
+    category: c.category,
+    hasDetailPage: c.hasDetailPage,
+    slug: c.slug,
+  })),
+);
 
 export default function HomePage() {
   return (
@@ -29,6 +39,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeBreadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homePortfolioList) }}
       />
       <HeroSection />
       <ServicesSection />
