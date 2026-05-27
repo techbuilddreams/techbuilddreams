@@ -69,10 +69,23 @@ export const organizationSchema = {
     'Firebase',
     'Strategic Technology Partnership',
     'Bilingual Software Consulting',
+    'Latino-owned business',
+    'Hispanic-owned software agency',
+    'Minority-owned technology company',
+    'Fractional CTO services',
+    'Small business software development',
   ],
   priceRange: '$$$',
   currenciesAccepted: 'USD',
   paymentAccepted: 'Credit Card, Bank Transfer, ACH',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+  ],
   sameAs: [
     'https://www.linkedin.com/company/93594952',
     'https://www.instagram.com/techbuilddreams/',
@@ -134,6 +147,28 @@ export const founderSchema = {
     '@type': 'EducationalOrganization',
     name: 'Northern Essex Community College',
   },
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'degree',
+      educationalLevel: 'Associate',
+      name: 'Associate of Science in Computer Science',
+      recognizedBy: {
+        '@type': 'EducationalOrganization',
+        name: 'Northern Essex Community College',
+      },
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'degree',
+      educationalLevel: 'Associate',
+      name: 'Associate of Science in Information Technology',
+      recognizedBy: {
+        '@type': 'EducationalOrganization',
+        name: 'Northern Essex Community College',
+      },
+    },
+  ],
   nationality: { '@type': 'Country', name: 'United States' },
 };
 
@@ -145,7 +180,7 @@ export const websiteSchema = {
   description:
     'Technology That Builds Dreams — Miami software development, mobile app development, and AI voice agents for businesses ready to scale.',
   publisher: { '@id': ORG_ID },
-  inLanguage: ['en', 'es'],
+  inLanguage: 'en',
 };
 
 export const siteWideGraph = {
@@ -224,6 +259,10 @@ export function faqPageSchema(items: Array<{ question: string; answer: string }>
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.faq-question', '.faq-answer'],
+    },
     mainEntity: items.map((item) => ({
       '@type': 'Question',
       name: item.question,
@@ -232,6 +271,52 @@ export function faqPageSchema(items: Array<{ question: string; answer: string }>
         text: item.answer,
       },
     })),
+  };
+}
+
+export interface PortfolioItem {
+  name: string;
+  url: string;
+  description: string;
+  category: string;
+  hasDetailPage: boolean;
+  slug: string;
+}
+
+export function portfolioItemListSchema(items: PortfolioItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Tech Build Dreams Portfolio',
+    description:
+      'Selected case studies and live products built by Tech Build Dreams LLC — SaaS platforms, mobile apps, and business websites.',
+    itemListOrder: 'https://schema.org/ItemListOrderDescending',
+    numberOfItems: items.length,
+    itemListElement: items.map((item, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      item: {
+        '@type': 'CreativeWork',
+        name: item.name,
+        description: item.description,
+        url: item.hasDetailPage ? absUrl(`/portfolio/${item.slug}`) : item.url,
+        genre: item.category,
+        creator: { '@id': ORG_ID },
+      },
+    })),
+  };
+}
+
+export function profilePageSchema(input: { url: string; name: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    url: absUrl(input.url),
+    name: input.name,
+    mainEntity: { '@id': FOUNDER_ID },
+    about: { '@id': ORG_ID },
+    breadcrumb: { '@type': 'BreadcrumbList' },
+    inLanguage: 'en',
   };
 }
 

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
-import { breadcrumbSchema } from '@/lib/schema';
+import { breadcrumbSchema, profilePageSchema } from '@/lib/schema';
 import { values } from '@/data/siteData';
 
 export const metadata: Metadata = {
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     'Founded by Shender Ramos — a Latino software engineer with 10+ years of experience and dual degrees in Computer Science and Information Technology. Bilingual EN/ES. Miami-based.',
   alternates: { canonical: '/about' },
   openGraph: {
+    type: 'profile',
     title: 'About Tech Build Dreams — Latino-Owned Miami Software Agency',
     description:
       'Founded by Shender Ramos. 10+ years of senior software engineering. Bilingual EN/ES.',
@@ -22,12 +23,21 @@ const breadcrumb = breadcrumbSchema([
   { name: 'About', url: '/about' },
 ]);
 
+const aboutProfile = profilePageSchema({
+  url: '/about',
+  name: 'About Tech Build Dreams — Founded by Shender Ramos',
+});
+
 export default function AboutPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutProfile) }}
       />
 
       <section className="pt-20 pb-12 bg-gradient-to-b from-blue-50 to-white">

@@ -44,11 +44,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/',
-    languages: {
-      en: '/',
-      es: '/',
-      'x-default': '/',
-    },
   },
   openGraph: {
     type: 'website',
@@ -56,9 +51,8 @@ export const metadata: Metadata = {
     siteName: 'Tech Build Dreams LLC',
     title: 'Tech Build Dreams LLC — Miami Software Development, Mobile Apps & AI Voice Agents',
     description:
-      'Custom web platforms, iOS & Flutter mobile apps, and 24/7 AI voice agents. Miami-based, serving Florida, New York, Massachusetts, and remote across the US. Bilingual English & Spanish.',
+      'Custom web platforms, iOS & Flutter mobile apps, and 24/7 AI voice agents. Miami-based, serving Florida, New York, Massachusetts, and remote across the US. Bilingual English & Spanish service.',
     locale: 'en_US',
-    alternateLocale: ['es_ES', 'es_US'],
     images: [
       {
         url: '/og-image.png',
