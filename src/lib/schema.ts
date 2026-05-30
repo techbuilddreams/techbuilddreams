@@ -87,6 +87,7 @@ export const organizationSchema = {
     },
   ],
   sameAs: [
+    'https://maps.app.goo.gl/em6vPuCeL5jRJrtk8',
     'https://www.linkedin.com/company/93594952',
     'https://www.instagram.com/techbuilddreams/',
     'https://www.facebook.com/techbuilddreams/',
