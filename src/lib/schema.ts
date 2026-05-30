@@ -346,7 +346,6 @@ export function profilePageSchema(input: { url: string; name: string }) {
     name: input.name,
     mainEntity: { '@id': FOUNDER_ID },
     about: { '@id': ORG_ID },
-    breadcrumb: { '@type': 'BreadcrumbList' },
     inLanguage: 'en',
   };
 }
