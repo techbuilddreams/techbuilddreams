@@ -21,9 +21,9 @@ export const HeroSection: React.FC = () => (
       </h1>
 
       <p className="text-xl md:text-2xl text-gray-600 mb-4 leading-relaxed max-w-3xl mx-auto">
-        Custom React web platforms, native iOS &amp; Flutter mobile apps, and 24/7 AI voice
-        agents — built by a Latino-owned, bilingual (EN/ES) engineering team. Miami-based, remote
-        across the United States.
+        <strong className="text-gray-900">Tech Build Dreams is a Latino-owned, bilingual (EN/ES) software agency based in Miami.</strong>{' '}
+        We build custom React web platforms, native iOS &amp; Flutter mobile apps, and 24/7 AI
+        voice agents for small businesses across the United States.
       </p>
 
       <p className="text-base md:text-lg text-gray-500 italic mb-8">
