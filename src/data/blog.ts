@@ -13,6 +13,16 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: 'ai-visibility-for-small-business',
+    title: 'AI Visibility for Small Business: How to Get Recommended by ChatGPT, Gemini, and Google AI Overviews',
+    description:
+      'What AI visibility (AEO/GEO) actually means in 2026, how ChatGPT, Claude, Gemini, Perplexity, and Google AI Overviews decide who to recommend, and the seven-item checklist to fix your site this week — without paying a vendor.',
+    datePublished: '2026-05-30',
+    readingTime: '7 min read',
+    category: 'AI Search & SEO',
+    load: () => import('../../content/blog/ai-visibility-for-small-business.mdx'),
+  },
+  {
     slug: 'how-much-does-an-ai-voice-agent-cost',
     title: 'How Much Does an AI Voice Agent Cost for a Small Business?',
     description:
