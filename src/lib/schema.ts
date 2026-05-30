@@ -308,6 +308,36 @@ export function portfolioItemListSchema(items: PortfolioItem[]) {
   };
 }
 
+export interface ServiceListItem {
+  id: string;
+  name: string;
+  url: string;
+  description: string;
+}
+
+export function servicesListSchema(items: ServiceListItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Tech Build Dreams Services',
+    description:
+      'Custom software development, mobile app development, AI voice agents, and fractional CTO services offered by Tech Build Dreams LLC.',
+    numberOfItems: items.length,
+    itemListElement: items.map((item, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      item: {
+        '@type': 'Service',
+        '@id': item.id,
+        name: item.name,
+        url: absUrl(item.url),
+        description: item.description,
+        provider: { '@id': ORG_ID },
+      },
+    })),
+  };
+}
+
 export function profilePageSchema(input: { url: string; name: string }) {
   return {
     '@context': 'https://schema.org',
