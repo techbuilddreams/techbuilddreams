@@ -7,7 +7,7 @@ import { Container } from './Container';
 import { SECTION_IDS } from '../../constants';
 
 const navLinks = [
-  { href: `/#${SECTION_IDS.HOW_WE_HELP}`, label: 'How We Help' },
+  { href: '/services', label: 'Services' },
   { href: '/portfolio', label: 'Our Work' },
   { href: `/#${SECTION_IDS.OUR_PROCESS}`, label: 'Our Process' },
   { href: '/about', label: 'About' },

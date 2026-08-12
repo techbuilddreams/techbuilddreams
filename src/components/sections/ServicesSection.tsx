@@ -48,6 +48,16 @@ export const ServicesSection: React.FC = () => (
           </article>
         ))}
       </div>
+
+      <div className="text-center mt-12">
+        <Link
+          href="/services"
+          className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+        >
+          Compare all services, timelines &amp; pricing
+          <ArrowRight className="w-4 h-4 ml-1" />
+        </Link>
+      </div>
     </Container>
   </section>
 );

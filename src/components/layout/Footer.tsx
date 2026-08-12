@@ -10,6 +10,7 @@ import {
 } from '../../constants';
 
 const serviceLinks = [
+  { href: '/services', label: 'All Services' },
   { href: '/services/web-development', label: 'Custom Web Development' },
   { href: '/services/mobile-apps', label: 'Mobile App Development' },
   { href: '/services/ai-voice-agents', label: 'AI Voice Agents & Automation' },
