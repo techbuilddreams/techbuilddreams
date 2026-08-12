@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { Container } from './Container';
 import { SECTION_IDS } from '../../constants';
@@ -23,7 +24,14 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-24 md:h-32">
           <div className="flex items-center">
             <Link href="/" aria-label="Tech Build Dreams home">
-              <img src="/logo.png" alt="Tech Build Dreams LLC" className="h-20 md:h-28" />
+              <Image
+                src="/logo.png"
+                alt="Tech Build Dreams LLC"
+                width={446}
+                height={112}
+                priority
+                className="h-20 md:h-28 w-auto"
+              />
             </Link>
           </div>
 

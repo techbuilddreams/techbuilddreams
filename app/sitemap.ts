@@ -38,6 +38,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     }));
 
+  const latestPost = posts.reduce<Date | null>((latest, post) => {
+    const stamp = new Date(post.dateModified ?? post.datePublished);
+    return !latest || stamp > latest ? stamp : latest;
+  }, null);
+
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: post.dateModified ? new Date(post.dateModified) : new Date(post.datePublished),
@@ -45,5 +50,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...portfolioRoutes, ...blogRoutes];
+  const feedRoute: MetadataRoute.Sitemap = [
+    {
+      url: `${SITE_URL}/blog/rss.xml`,
+      lastModified: latestPost ?? now,
+      changeFrequency: 'weekly',
+      priority: 0.3,
+    },
+  ];
+
+  return [...staticRoutes, ...serviceRoutes, ...portfolioRoutes, ...blogRoutes, ...feedRoute];
 }

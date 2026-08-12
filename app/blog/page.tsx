@@ -74,6 +74,14 @@ export default function BlogIndex() {
               </article>
             ))}
           </div>
+
+          <p className="mt-12 pt-8 border-t border-gray-200 text-sm text-gray-500">
+            Prefer a reader?{' '}
+            <a href="/blog/rss.xml" className="text-blue-600 font-medium hover:text-blue-700">
+              Subscribe via RSS
+            </a>
+            .
+          </p>
         </Container>
       </section>
     </>

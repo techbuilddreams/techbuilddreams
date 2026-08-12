@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import { siteWideGraph } from '@/lib/schema';
 import { SITE_URL } from '@/lib/seo';
 import './globals.css';
@@ -42,9 +43,6 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     type: 'website',
     url: SITE_URL,
@@ -74,6 +72,9 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
+  alternates: {
+    canonical: '/',
+  },
   other: {
     'geo.region': 'US-FL',
     'geo.placename': 'Miami, Florida',
@@ -95,6 +96,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://api-smartassistant.up.railway.app" />
+        {/*
+          Declared here rather than via `alternates.types` in metadata: every
+          page sets its own `alternates` for the canonical, and Next replaces
+          that object wholesale instead of deep-merging, which drops the feed
+          link on all of them.
+        */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Tech Build Dreams — Field Notes"
+          href="/blog/rss.xml"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteWideGraph) }}
@@ -104,6 +117,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <GoogleAnalytics />
         <Script id="smartassistant-chat" strategy="afterInteractive">
           {`(function(){const s=document.createElement('script');s.src='https://api-smartassistant.up.railway.app/static/chat-widget.js';s.defer=true;s.onload=()=>window.NurivionChat.init({businessId:'7cb15d99-2f2b-49d1-8350-aba3a1e185bd',agentId:'default',apiBase:'https://api-smartassistant.up.railway.app',title:'Dreamer'});document.head.appendChild(s);})();`}
         </Script>

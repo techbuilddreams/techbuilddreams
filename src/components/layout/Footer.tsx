@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Linkedin, Instagram, Facebook, Mail, Phone } from 'lucide-react';
 import { Container } from './Container';
 import {
@@ -24,7 +25,13 @@ export const Footer: React.FC = () => (
         <div className="md:col-span-2">
           <div className="mb-4">
             <Link href="/" aria-label="Tech Build Dreams home" className="inline-block">
-              <img src="/logo.png" alt="Tech Build Dreams LLC" className="h-20 md:h-28" />
+              <Image
+                src="/logo.png"
+                alt="Tech Build Dreams LLC"
+                width={446}
+                height={112}
+                className="h-20 md:h-28 w-auto"
+              />
             </Link>
           </div>
           <p className="text-gray-400 mb-6 max-w-md">
