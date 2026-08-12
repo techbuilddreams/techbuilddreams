@@ -46,6 +46,10 @@ export const business = {
     addressCountry: 'US',
   },
 
+  /** Spelled-out forms for prose. schema.org wants the codes above. */
+  addressRegionName: 'Florida',
+  addressCountryName: 'United States',
+
   geo: { latitude: 25.7617, longitude: -80.1918 },
 
   openingHours: {
@@ -119,5 +123,10 @@ export const business = {
 /** "2125 Biscayne Blvd, Ste 204, Miami, Florida 33137, United States" */
 export function formattedAddress(): string {
   const a = business.address;
-  return `${a.streetAddress}, ${a.addressLocality}, Florida ${a.postalCode}, United States`;
+  return [
+    a.streetAddress,
+    a.addressLocality,
+    `${business.addressRegionName} ${a.postalCode}`,
+    business.addressCountryName,
+  ].join(', ');
 }

@@ -21,6 +21,17 @@ export interface OgImageInput {
   title: string;
 }
 
+/**
+ * satori has no line clamping, so an over-long headline would run off the
+ * card. Step the size down instead. Verified against the longest current
+ * title (100 chars); the 120 tier is headroom for future content.
+ */
+function titleFontSize(title: string): number {
+  if (title.length > 120) return 48;
+  if (title.length > 70) return 62;
+  return 76;
+}
+
 export function renderOgImage({ eyebrow, title }: OgImageInput): ImageResponse {
   return new ImageResponse(
     (
@@ -51,12 +62,10 @@ export function renderOgImage({ eyebrow, title }: OgImageInput): ImageResponse {
           <div
             style={{
               marginTop: 28,
-              fontSize: title.length > 70 ? 62 : 76,
+              fontSize: titleFontSize(title),
               lineHeight: 1.12,
               color: '#ffffff',
               fontWeight: 700,
-              // satori has no line clamping; the size step above keeps long
-              // headlines inside the card.
               display: 'flex',
             }}
           >

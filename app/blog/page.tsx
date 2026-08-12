@@ -1,13 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
-import { posts } from '@/data/blog';
+import { posts, BLOG_DESCRIPTION } from '@/data/blog';
 import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Blog — Notes on AI, Software Development, and Building Real Businesses',
-  description:
-    'Field notes from a senior engineer building AI voice agents, custom web platforms, and mobile apps for small and growing businesses. Honest pricing, real tradeoffs.',
+  description: BLOG_DESCRIPTION,
   alternates: { canonical: '/blog' },
   openGraph: {
     title: 'Blog — Tech Build Dreams LLC',

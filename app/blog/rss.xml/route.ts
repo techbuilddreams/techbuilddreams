@@ -1,4 +1,4 @@
-import { posts } from '@/data/blog';
+import { BLOG_DESCRIPTION, latestPostDate, postsByDateDesc } from '@/data/blog';
 import { business } from '@/data/business';
 import { absUrl } from '@/lib/seo';
 
@@ -15,17 +15,12 @@ function escapeXml(value: string): string {
 }
 
 export function GET() {
-  const sorted = [...posts].sort(
-    (a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime(),
-  );
-
-  const lastBuildDate = sorted.length
-    ? new Date(sorted[0].dateModified ?? sorted[0].datePublished).toUTCString()
-    : new Date(0).toUTCString();
+  const sorted = postsByDateDesc();
+  const lastBuildDate = (latestPostDate() ?? new Date(0)).toUTCString();
 
   const items = sorted
     .map((post) => {
-      const url = absUrl(`/blog/${post.slug}`);
+      const url = escapeXml(absUrl(`/blog/${post.slug}`));
       return [
         '    <item>',
         `      <title>${escapeXml(post.title)}</title>`,
@@ -45,11 +40,11 @@ export function GET() {
     '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">',
     '  <channel>',
     `    <title>${escapeXml(`${business.legalName} — Field Notes`)}</title>`,
-    `    <link>${absUrl('/blog')}</link>`,
-    `    <description>Field notes from a senior engineer building AI voice agents, custom web platforms, and mobile apps for small and growing businesses.</description>`,
+    `    <link>${escapeXml(absUrl('/blog'))}</link>`,
+    `    <description>${escapeXml(BLOG_DESCRIPTION)}</description>`,
     '    <language>en-us</language>',
     `    <lastBuildDate>${lastBuildDate}</lastBuildDate>`,
-    `    <atom:link href="${absUrl('/blog/rss.xml')}" rel="self" type="application/rss+xml" />`,
+    `    <atom:link href="${escapeXml(absUrl('/blog/rss.xml'))}" rel="self" type="application/rss+xml" />`,
     `    <copyright>${escapeXml(business.legalName)}</copyright>`,
     items,
     '  </channel>',
