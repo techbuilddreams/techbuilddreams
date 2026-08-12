@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/seo';
-import { posts } from '@/data/blog';
+import { posts, latestPostDate } from '@/data/blog';
 import { customers } from '@/data/siteData';
 
 const SERVICE_SLUGS = [
@@ -45,5 +45,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...portfolioRoutes, ...blogRoutes];
+  const feedRoute: MetadataRoute.Sitemap = [
+    {
+      url: `${SITE_URL}/blog/rss.xml`,
+      lastModified: latestPostDate() ?? now,
+      changeFrequency: 'weekly',
+      priority: 0.3,
+    },
+  ];
+
+  return [...staticRoutes, ...serviceRoutes, ...portfolioRoutes, ...blogRoutes, ...feedRoute];
 }

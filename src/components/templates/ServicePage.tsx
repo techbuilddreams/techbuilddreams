@@ -52,7 +52,7 @@ export const ServicePage: React.FC<ServicePageProps> = ({
 }) => {
   const breadcrumb = breadcrumbSchema([
     { name: 'Home', url: '/' },
-    { name: 'Services', url: '/#how-we-help' },
+    { name: 'Services', url: '/services' },
     { name: title, url: `/services/${slug}` },
   ]);
 

@@ -11,6 +11,10 @@ export interface BlogPost {
   load: () => Promise<{ default: ComponentType }>;
 }
 
+/** Shared by the /blog metadata and the RSS channel description. */
+export const BLOG_DESCRIPTION =
+  'Field notes from a senior engineer building AI voice agents, custom web platforms, and mobile apps for small and growing businesses. Honest pricing, real tradeoffs.';
+
 export const posts: BlogPost[] = [
   {
     slug: 'ai-visibility-for-small-business',
@@ -60,4 +64,19 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 
 export function getPostSlugs(): string[] {
   return posts.map((p) => p.slug);
+}
+
+/** When the blog last changed — the newest edit, not the newest publish. */
+export function latestPostDate(): Date | null {
+  return posts.reduce<Date | null>((latest, post) => {
+    const stamp = new Date(post.dateModified ?? post.datePublished);
+    return !latest || stamp > latest ? stamp : latest;
+  }, null);
+}
+
+/** Newest first. */
+export function postsByDateDesc(): BlogPost[] {
+  return [...posts].sort(
+    (a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime(),
+  );
 }
