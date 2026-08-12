@@ -6,13 +6,14 @@ import {
   SERVICE_IDS,
   absUrl,
 } from './seo';
+import { business } from '../data/business';
 
 export const organizationSchema = {
   '@type': ['LocalBusiness', 'ProfessionalService', 'Organization'],
   '@id': ORG_ID,
-  name: 'Tech Build Dreams LLC',
-  alternateName: ['Tech Build Dreams', 'TBD'],
-  legalName: 'Tech Build Dreams LLC',
+  name: business.legalName,
+  alternateName: business.alternateNames,
+  legalName: business.legalName,
   url: SITE_URL,
   logo: {
     '@type': 'ImageObject',
@@ -21,24 +22,18 @@ export const organizationSchema = {
     height: 512,
   },
   image: absUrl('/og-image.png'),
-  description:
-    'Miami-based software development and AI agency. We build custom web platforms, native iOS and Flutter mobile apps, and 24/7 AI voice agents for businesses ready to scale. Bilingual English and Spanish. Remote service across the United States including Florida, New York, and Massachusetts.',
-  slogan: 'Technology That Builds Dreams',
-  email: 'info@techbuilddreams.com',
-  telephone: '+1-800-301-6584',
-  foundingDate: '2023',
+  description: business.description,
+  slogan: business.slogan,
+  email: business.email,
+  telephone: business.telephone,
+  foundingDate: business.foundingDate,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '2125 Biscayne Blvd, Ste 204',
-    addressLocality: 'Miami',
-    addressRegion: 'FL',
-    postalCode: '33137',
-    addressCountry: 'US',
+    ...business.address,
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 25.7617,
-    longitude: -80.1918,
+    ...business.geo,
   },
   areaServed: [
     { '@type': 'City', name: 'Miami', containedInPlace: { '@type': 'State', name: 'Florida' } },
@@ -51,7 +46,7 @@ export const organizationSchema = {
     { '@type': 'Country', name: 'United States' },
   ],
   serviceArea: [{ '@type': 'AdministrativeArea', name: 'United States' }],
-  knowsLanguage: ['en', 'es'],
+  knowsLanguage: business.languages,
   knowsAbout: [
     'Custom Web Development',
     'React',
@@ -81,32 +76,27 @@ export const organizationSchema = {
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00',
+      dayOfWeek: business.openingHours.days,
+      opens: business.openingHours.opens,
+      closes: business.openingHours.closes,
     },
   ],
-  sameAs: [
-    'https://maps.app.goo.gl/em6vPuCeL5jRJrtk8',
-    'https://www.linkedin.com/company/93594952',
-    'https://www.instagram.com/techbuilddreams/',
-    'https://www.facebook.com/techbuilddreams/',
-  ],
+  sameAs: business.sameAs,
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '+1-800-301-6584',
-      email: 'info@techbuilddreams.com',
+      telephone: business.telephone,
+      email: business.email,
       contactType: 'sales',
       areaServed: 'US',
-      availableLanguage: ['en', 'es'],
+      availableLanguage: business.languages,
     },
     {
       '@type': 'ContactPoint',
-      email: 'info@techbuilddreams.com',
+      email: business.email,
       contactType: 'customer support',
       areaServed: 'US',
-      availableLanguage: ['en', 'es'],
+      availableLanguage: business.languages,
     },
   ],
   founder: { '@id': FOUNDER_ID },
@@ -121,13 +111,12 @@ export const organizationSchema = {
 export const founderSchema = {
   '@type': 'Person',
   '@id': FOUNDER_ID,
-  name: 'Shender Ramos',
-  givenName: 'Shender',
-  familyName: 'Ramos',
-  jobTitle: 'Founder & Lead Software Engineer',
-  description:
-    'Latino software engineer with 10+ years of experience and dual degrees in Computer Science and Information Technology. Founder of Tech Build Dreams LLC.',
-  knowsLanguage: ['en', 'es'],
+  name: business.founder.name,
+  givenName: business.founder.givenName,
+  familyName: business.founder.familyName,
+  jobTitle: business.founder.jobTitle,
+  description: `${business.founder.name} is ${business.founder.bio}. Founder of ${business.legalName}.`,
+  knowsLanguage: business.languages,
   knowsAbout: [
     'Full-Stack Software Engineering',
     'React',
@@ -138,15 +127,12 @@ export const founderSchema = {
     'AI Integration',
     'Technology Strategy',
   ],
-  url: 'https://shenderramos.com',
-  sameAs: [
-    'https://shenderramos.com',
-    'https://www.linkedin.com/company/93594952',
-  ],
+  url: business.founder.url,
+  sameAs: business.founder.sameAs,
   worksFor: { '@id': ORG_ID },
   alumniOf: {
     '@type': 'EducationalOrganization',
-    name: 'Northern Essex Community College',
+    name: business.founder.alumniOf,
   },
   hasCredential: [
     {
