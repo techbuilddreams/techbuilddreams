@@ -6,7 +6,7 @@ import {
   SERVICE_IDS,
   absUrl,
 } from './seo';
-import { business } from '../data/business';
+import { business, organizationSameAs } from '../data/business';
 
 export const organizationSchema = {
   '@type': ['LocalBusiness', 'ProfessionalService', 'Organization'],
@@ -81,7 +81,7 @@ export const organizationSchema = {
       closes: business.openingHours.closes,
     },
   ],
-  sameAs: business.sameAs,
+  sameAs: organizationSameAs,
   contactPoint: [
     {
       '@type': 'ContactPoint',

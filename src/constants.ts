@@ -6,7 +6,11 @@ export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/company/93594952',
   instagram: 'https://www.instagram.com/techbuilddreams/',
   facebook: 'https://www.facebook.com/techbuilddreams/',
+  youtube: 'https://www.youtube.com/@techbuilddreams',
 } as const;
+
+/** Google Business Profile. Part of `sameAs` so Google ties the two entities together. */
+export const GOOGLE_BUSINESS_PROFILE = 'https://maps.app.goo.gl/em6vPuCeL5jRJrtk8';
 
 export const SECTION_IDS = {
   HOW_WE_HELP: 'how-we-help',

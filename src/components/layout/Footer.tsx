@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Linkedin, Instagram, Facebook, Mail, Phone } from 'lucide-react';
+import { Linkedin, Instagram, Facebook, Youtube, Mail, Phone } from 'lucide-react';
 import { Container } from './Container';
 import {
   COMPANY_EMAIL,
@@ -80,6 +80,15 @@ export const Footer: React.FC = () => (
               className="text-gray-400 hover:text-white transition-colors"
             >
               <Facebook className="w-5 h-5" />
+            </a>
+            <a
+              href={SOCIAL_LINKS.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Tech Build Dreams on YouTube"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              <Youtube className="w-5 h-5" />
             </a>
           </div>
         </div>

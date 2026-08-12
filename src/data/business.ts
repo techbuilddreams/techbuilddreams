@@ -1,4 +1,9 @@
-import { COMPANY_EMAIL, COMPANY_PHONE, SOCIAL_LINKS } from '../constants';
+import {
+  COMPANY_EMAIL,
+  COMPANY_PHONE,
+  GOOGLE_BUSINESS_PROFILE,
+  SOCIAL_LINKS,
+} from '../constants';
 
 /**
  * Canonical business facts — the single source of truth for anything that
@@ -105,20 +110,30 @@ export const business = {
     { label: 'Mobile monetization', items: 'RevenueCat, AdMob' },
   ],
 
-  /** Profiles Google and AI crawlers use to resolve us as one entity. */
-  sameAs: [
-    'https://maps.app.goo.gl/em6vPuCeL5jRJrtk8',
-    SOCIAL_LINKS.linkedin,
-    SOCIAL_LINKS.instagram,
-    SOCIAL_LINKS.facebook,
-  ],
-
+  /**
+   * Public profiles, in the order they appear in the footer.
+   *
+   * Keep this in step with the Social profiles list on the Google Business
+   * Profile — each side previously knew about channels the other did not,
+   * which fragments the entity graph Google builds from them.
+   */
   socials: [
     { label: 'LinkedIn', url: SOCIAL_LINKS.linkedin },
     { label: 'Instagram', url: SOCIAL_LINKS.instagram },
     { label: 'Facebook', url: SOCIAL_LINKS.facebook },
+    { label: 'YouTube', url: SOCIAL_LINKS.youtube },
   ],
 } as const;
+
+/**
+ * Everything Google and AI crawlers use to resolve us as one entity: the
+ * Business Profile plus every social channel. Derived from `socials` so a new
+ * profile only has to be added in one place.
+ */
+export const organizationSameAs: string[] = [
+  GOOGLE_BUSINESS_PROFILE,
+  ...business.socials.map((s) => s.url),
+];
 
 /** "2125 Biscayne Blvd, Ste 204, Miami, Florida 33137, United States" */
 export function formattedAddress(): string {
