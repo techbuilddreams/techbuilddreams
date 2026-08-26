@@ -76,14 +76,12 @@ export const organizationSchema = {
   priceRange: '$$$',
   currenciesAccepted: 'USD',
   paymentAccepted: 'Credit Card, Bank Transfer, ACH',
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: business.openingHours.days,
-      opens: business.openingHours.opens,
-      closes: business.openingHours.closes,
-    },
-  ],
+  openingHoursSpecification: business.openingHours.map((group) => ({
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: group.days,
+    opens: group.opens,
+    closes: group.closes,
+  })),
   sameAs: organizationSameAs,
   contactPoint: [
     {
