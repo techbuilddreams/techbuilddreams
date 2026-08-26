@@ -59,11 +59,21 @@ export const business = {
 
   geo: { latitude: 25.7617, longitude: -80.1918 },
 
-  openingHours: {
-    days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '18:00',
-  },
+  /**
+   * Matches the GBP's actual hours (confirmed 2026-08-26: the owner keeps
+   * the weekend hours as-is). Grouped by distinct opens/closes pair, the
+   * same shape schema.org's OpeningHoursSpecification expects, so
+   * schema.ts maps this 1:1 instead of reshaping it.
+   */
+  openingHours: [
+    {
+      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+    { days: ['Saturday'], opens: '09:00', closes: '16:00' },
+    { days: ['Sunday'], opens: '12:00', closes: '16:00' },
+  ],
 
   /**
    * Kept in step with the Service area list on the Google Business Profile —
