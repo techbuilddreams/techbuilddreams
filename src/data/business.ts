@@ -21,6 +21,8 @@ export interface ServiceArea {
   /** Omitted for statewide / nationwide entries. */
   city?: string;
   state: string;
+  /** e.g. "NY" — for compact prose (footer, hero). schema.org wants `state`. */
+  stateAbbr: string;
   /** Human-readable qualifier, e.g. "HQ — on-site & remote". */
   note: string;
 }
@@ -41,7 +43,7 @@ export const business = {
   languageNames: 'English, Spanish',
 
   description:
-    'Miami-based software development and AI agency. We build custom web platforms, native iOS and Flutter mobile apps, and 24/7 AI voice agents for businesses ready to scale. Bilingual English and Spanish. Remote service across the United States including Florida, New York, and Massachusetts.',
+    'Miami-based software development and AI agency. We build custom web platforms, native iOS and Flutter mobile apps, and 24/7 AI voice agents for businesses ready to scale. Bilingual English and Spanish. Remote service across the United States including Florida, New York, New Jersey, and Massachusetts.',
 
   address: {
     streetAddress: '2125 Biscayne Blvd, Ste 204',
@@ -63,11 +65,22 @@ export const business = {
     closes: '18:00',
   },
 
+  /**
+   * Kept in step with the Service area list on the Google Business Profile —
+   * that list is now the source of truth (edited 2026-08-26). Deliberately at
+   * city granularity, not the hamlet/neighborhood granularity GBP's picker
+   * allows (e.g. Glenmont folds into Albany here).
+   */
   serviceAreas: [
-    { city: 'Miami', state: 'Florida', note: 'HQ — on-site & remote' },
-    { city: 'Albany', state: 'New York', note: 'remote' },
-    { city: 'Bronx', state: 'New York', note: 'remote' },
-    { city: 'Boston', state: 'Massachusetts', note: 'remote' },
+    { city: 'Miami', state: 'Florida', stateAbbr: 'FL', note: 'HQ — on-site & remote' },
+    { city: 'Albany', state: 'New York', stateAbbr: 'NY', note: 'remote' },
+    { city: 'Bronx', state: 'New York', stateAbbr: 'NY', note: 'remote' },
+    { city: 'Troy', state: 'New York', stateAbbr: 'NY', note: 'remote' },
+    { city: 'White Plains', state: 'New York', stateAbbr: 'NY', note: 'remote' },
+    { city: 'Yonkers', state: 'New York', stateAbbr: 'NY', note: 'remote' },
+    { city: 'New Rochelle', state: 'New York', stateAbbr: 'NY', note: 'remote' },
+    { city: 'Boston', state: 'Massachusetts', stateAbbr: 'MA', note: 'remote' },
+    { city: 'West New York', state: 'New Jersey', stateAbbr: 'NJ', note: 'remote' },
   ] as ServiceArea[],
 
   founder: {
@@ -134,6 +147,22 @@ export const organizationSameAs: string[] = [
   GOOGLE_BUSINESS_PROFILE,
   ...business.socials.map((s) => s.url),
 ];
+
+/** Every state we serve, in first-appearance order — for schema.org `areaServed`. */
+export function serviceAreaStates(): string[] {
+  return [...new Set(business.serviceAreas.map((a) => a.state))];
+}
+
+/** Cities grouped by state, in first-appearance order — e.g. for footer prose. */
+export function serviceAreasByState(): Array<{ state: string; stateAbbr: string; cities: string[] }> {
+  const groups: Array<{ state: string; stateAbbr: string; cities: string[] }> = [];
+  for (const area of business.serviceAreas) {
+    const group = groups.find((g) => g.state === area.state);
+    if (group) group.cities.push(area.city ?? area.state);
+    else groups.push({ state: area.state, stateAbbr: area.stateAbbr, cities: [area.city ?? area.state] });
+  }
+  return groups;
+}
 
 /** "2125 Biscayne Blvd, Ste 204, Miami, Florida 33137, United States" */
 export function formattedAddress(): string {

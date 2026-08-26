@@ -6,7 +6,7 @@ import {
   SERVICE_IDS,
   absUrl,
 } from './seo';
-import { business, organizationSameAs } from '../data/business';
+import { business, organizationSameAs, serviceAreaStates } from '../data/business';
 
 export const organizationSchema = {
   '@type': ['LocalBusiness', 'ProfessionalService', 'Organization'],
@@ -36,16 +36,19 @@ export const organizationSchema = {
     ...business.geo,
   },
   areaServed: [
-    { '@type': 'City', name: 'Miami', containedInPlace: { '@type': 'State', name: 'Florida' } },
-    { '@type': 'City', name: 'Albany', containedInPlace: { '@type': 'State', name: 'New York' } },
-    { '@type': 'City', name: 'Bronx', containedInPlace: { '@type': 'State', name: 'New York' } },
-    { '@type': 'City', name: 'Boston', containedInPlace: { '@type': 'State', name: 'Massachusetts' } },
-    { '@type': 'State', name: 'Florida' },
-    { '@type': 'State', name: 'New York' },
-    { '@type': 'State', name: 'Massachusetts' },
+    ...business.serviceAreas.map((a) => ({
+      '@type': 'City',
+      name: a.city,
+      containedInPlace: { '@type': 'State', name: a.state },
+    })),
+    ...serviceAreaStates().map((state) => ({ '@type': 'State', name: state })),
     { '@type': 'Country', name: 'United States' },
   ],
-  serviceArea: [{ '@type': 'AdministrativeArea', name: 'United States' }],
+  // No `serviceArea: [{ ... 'United States' }]` here — that field is the
+  // Organization-level analog of the GBP's single service-area radius, and a
+  // nationwide value in it is the same dilution bug we just fixed on the GBP
+  // itself. `areaServed` above already carries the specific cities/states,
+  // which is where the ranking signal actually comes from.
   knowsLanguage: business.languages,
   knowsAbout: [
     'Custom Web Development',

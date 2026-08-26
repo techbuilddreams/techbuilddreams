@@ -9,6 +9,15 @@ import {
   COMPANY_PHONE_DISPLAY,
   SOCIAL_LINKS,
 } from '../../constants';
+import { serviceAreasByState } from '../../data/business';
+
+/** "Albany, Bronx & Troy" — for compact footer prose, not JSX source. */
+function joinWithAmpersand(items: string[]): string {
+  if (items.length <= 1) return items.join('');
+  return `${items.slice(0, -1).join(', ')} & ${items[items.length - 1]}`;
+}
+
+const serviceAreaGroups = serviceAreasByState();
 
 const serviceLinks = [
   { href: '/services', label: 'All Services' },
@@ -109,9 +118,12 @@ export const Footer: React.FC = () => (
         <div>
           <h3 className="font-semibold mb-4">Service Areas</h3>
           <ul className="space-y-2 text-gray-400">
-            <li>Miami, Florida (HQ)</li>
-            <li>Albany &amp; Bronx, NY</li>
-            <li>Massachusetts</li>
+            {serviceAreaGroups.map((group) => (
+              <li key={group.state}>
+                {joinWithAmpersand(group.cities)}, {group.stateAbbr}
+                {group.state === 'Florida' ? ' (HQ)' : ''}
+              </li>
+            ))}
             <li>Remote · United States</li>
           </ul>
           <h3 className="font-semibold mt-6 mb-4">Company</h3>
