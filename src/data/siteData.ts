@@ -164,6 +164,38 @@ export const customers: Customer[] = [
     hasDetailPage: true,
   },
   {
+    slug: 'tiendacloud',
+    name: 'TiendaCloud',
+    url: 'https://tiendacloud.app',
+    description:
+      'Cloud-based point-of-sale, inventory, and DGII-compliant tax billing platform for small and medium retailers in the Dominican Republic',
+    category: 'SaaS Platform',
+    challenge:
+      'Dominican retailers — tiendas, boutiques, cell phone shops, restaurants, colmados, pharmacies — were stuck between manual record-keeping and POS software built for other markets. None of it issued NCF tax receipts, filed DGII&rsquo;s Formato 607, or handled the cash-and-fiado (store credit) sales culture common to Dominican small business.',
+    solution:
+      'Built TiendaCloud as a mobile-first, offline-capable PWA: point-of-sale, multi-branch inventory with audited transfers, WhatsApp-delivered invoices and quotes, IMEI tracking for phone retailers, a restaurant mode with table and tip management, per-customer credit limits, and automatic NCF receipts with monthly Formato 607 filings for the DGII.',
+    stack: ['Next.js', 'Supabase', 'PostgreSQL', 'PWA'],
+    outcome:
+      'Live SaaS product serving Dominican retailers across 14+ business types, with a 30-day free trial and subscription tiers from RD$890 to RD$3,990/month.',
+    hasDetailPage: true,
+  },
+  {
+    slug: 'runtimeclear',
+    name: 'RuntimeClear',
+    url: 'https://runtimeclear.com',
+    description:
+      'Open-source scanner and in-browser reporting tool that inventories Oracle Java installations for organizations responding to Java SE license reviews',
+    category: 'Developer Tool',
+    challenge:
+      'Organizations facing an Oracle Java license review had no fast way to inventory every Java install, container image, and CI pipeline across their infrastructure — and Oracle&rsquo;s per-employee subscription pricing makes an incomplete inventory expensive to get wrong, especially ahead of Oracle&rsquo;s 2026 licensing changes.',
+    solution:
+      'Built RuntimeClear as an open-source, read-only scanner for Linux, macOS, and Windows, paired with an in-browser report that classifies every Java install against Oracle&rsquo;s published license terms and hands back a migration runbook to free OpenJDK builds.',
+    stack: ['Open-source scanner', 'Static site', 'OpenJDK migration tooling'],
+    outcome:
+      'Free scanner and summary available to any organization; a $149 full report and $399 MSP tier (up to 10 client organizations) for teams that need a documented compliance artifact, with 12-month report access and a 14-day refund guarantee.',
+    hasDetailPage: true,
+  },
+  {
     slug: 'shenderramos',
     name: 'Shender Ramos',
     url: 'https://shenderramos.com',
