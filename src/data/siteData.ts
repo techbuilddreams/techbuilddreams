@@ -196,6 +196,22 @@ export const customers: Customer[] = [
     hasDetailPage: true,
   },
   {
+    slug: 'jysmartsolution',
+    name: 'JY Smart Solutions',
+    url: 'https://jysmartsolution.com',
+    description:
+      'Bilingual-market business website for a Santo Domingo electronics retailer and repair shop — phones, accessories, air conditioning, TVs, and repair services',
+    category: 'Business Website',
+    challenge:
+      'JY Smart Solutions needed an online presence to complement its physical Santo Domingo storefront — a fast, mobile-first way for customers to browse product categories and repair services before calling or visiting.',
+    solution:
+      'Designed and built a Spanish-language marketing site as an installable PWA, with WhatsApp- and Facebook-optimized social sharing and a full catalog of products and repair services presented mobile-first for a Dominican audience.',
+    stack: ['React', 'Vite', 'PWA'],
+    outcome:
+      'Live marketing site for a Santo Domingo retailer, giving walk-in and phone customers a mobile-friendly way to browse products and repair services before visiting the store.',
+    hasDetailPage: true,
+  },
+  {
     slug: 'shenderramos',
     name: 'Shender Ramos',
     url: 'https://shenderramos.com',
