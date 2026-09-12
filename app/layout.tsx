@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+// Kept for the commented-out Nurivion chat widget below — re-enable together.
 import Script from 'next/script';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -95,7 +96,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        {/*
+          Preconnect for the Nurivion "Dreamer" chat widget — paired with the
+          Script tag below in <body>. Commented out together with it
+          (2026-09-12): the widget isn't working right now, so warming up a
+          connection to it is wasted DNS/TLS setup. Re-enable both once
+          Nurivion fixes the widget.
         <link rel="preconnect" href="https://api-smartassistant.up.railway.app" />
+        */}
         {/*
           Declared here rather than via `alternates.types` in metadata: every
           page sets its own `alternates` for the canonical, and Next replaces
@@ -118,9 +126,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <GoogleAnalytics />
+        {/*
+          Nurivion "Dreamer" chat widget — disabled 2026-09-12, owner reports
+          it's not fully working right now. Uncomment (and the matching
+          preconnect above) once it's fixed.
         <Script id="smartassistant-chat" strategy="afterInteractive">
           {`(function(){const s=document.createElement('script');s.src='https://api-smartassistant.up.railway.app/static/chat-widget.js';s.defer=true;s.onload=()=>window.NurivionChat.init({businessId:'7cb15d99-2f2b-49d1-8350-aba3a1e185bd',agentId:'default',apiBase:'https://api-smartassistant.up.railway.app',title:'Dreamer'});document.head.appendChild(s);})();`}
         </Script>
+        */}
       </body>
     </html>
   );
