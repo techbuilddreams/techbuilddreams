@@ -3,7 +3,7 @@ export const COMPANY_PHONE = '+1-800-301-6584';
 export const COMPANY_PHONE_DISPLAY = '(800) 301-6584';
 
 export const SOCIAL_LINKS = {
-  linkedin: 'https://www.linkedin.com/company/93594952',
+  linkedin: 'https://www.linkedin.com/company/techbuilddreams',
   instagram: 'https://www.instagram.com/techbuilddreams/',
   facebook: 'https://www.facebook.com/techbuilddreams/',
   youtube: 'https://www.youtube.com/@techbuilddreams',
