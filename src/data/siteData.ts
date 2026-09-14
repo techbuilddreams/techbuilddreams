@@ -259,7 +259,7 @@ export const faqs: FAQ[] = [
   {
     question: 'How much does it cost to build a custom application?',
     answer:
-      'Project investment typically ranges from $15,000 for focused digital products to $250,000+ for enterprise solutions. We also offer ongoing executive technology partnership retainers. Contact us for a transparent proposal tailored to your vision.',
+      'It depends on scope. A focused small-business website or automation typically starts around $2,500. Custom applications and platforms generally run $15,000 to $250,000+ depending on complexity. We also offer ongoing technology partnership retainers. You get a fixed number after one conversation — no surprises, no hourly creep.',
   },
   {
     question: 'How do I get started with Tech Build Dreams?',

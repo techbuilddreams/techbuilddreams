@@ -17,6 +17,16 @@ export const BLOG_DESCRIPTION =
 
 export const posts: BlogPost[] = [
   {
+    slug: 'capital-region-business-website-audit',
+    title: 'I Audited 89 Capital Region Business Websites. Here Is What Is Broken.',
+    description:
+      'A hand-checked audit of 89 small businesses across Albany, Schenectady, Troy, Colonie and Clifton Park: 28 with no website, 9 actually broken, 15 stale, 19 losing every lead that arrives after 5pm — plus the five-minute check to run on your own site tonight.',
+    datePublished: '2026-09-14',
+    readingTime: '6 min read',
+    category: 'Local Business',
+    load: () => import('../../content/blog/capital-region-business-website-audit.mdx'),
+  },
+  {
     slug: 'ai-visibility-for-small-business',
     title: 'AI Visibility for Small Business: How to Get Recommended by ChatGPT, Gemini, and Google AI Overviews',
     description:

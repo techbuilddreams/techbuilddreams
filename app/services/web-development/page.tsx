@@ -57,7 +57,7 @@ export default function WebDevelopmentPage() {
         {
           question: 'Do you build websites or web applications?',
           answer:
-            'We build web applications — interactive software that users log into, like SaaS platforms, customer portals, and internal tools. We do not build marketing brochure sites or WordPress themes. If you need a marketing site, a Webflow agency is a better fit.',
+            'Both. This page covers web applications — interactive software that users log into, like SaaS platforms, customer portals, and internal tools. We also build fast, mobile-first business websites for local service companies, starting around $2,500, on the same React and Next.js stack so you own the code either way. The one thing we do not do is patch and re-theme old WordPress installs.',
         },
         {
           question: 'What tech stack do you use and why?',

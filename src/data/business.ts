@@ -43,7 +43,7 @@ export const business = {
   languageNames: 'English, Spanish',
 
   description:
-    'Miami-based software development and AI agency. We build custom web platforms, native iOS and Flutter mobile apps, and 24/7 AI voice agents for businesses ready to scale. Bilingual English and Spanish. Remote service across the United States including Florida, New York, New Jersey, and Massachusetts.',
+    'Software development and AI agency with offices in Miami, Florida and on-site service across New York\u2019s Capital Region \u2014 Albany, Schenectady, Troy, Colonie and Clifton Park. We build small-business websites, custom web platforms, native iOS and Flutter mobile apps, and 24/7 AI voice agents. Bilingual English and Spanish. Remote service across the United States including Florida, New York, New Jersey, and Massachusetts.',
 
   address: {
     streetAddress: '2125 Biscayne Blvd, Ste 204',
@@ -77,15 +77,26 @@ export const business = {
 
   /**
    * Kept in step with the Service area list on the Google Business Profile —
-   * that list is now the source of truth (edited 2026-08-26). Deliberately at
-   * city granularity, not the hamlet/neighborhood granularity GBP's picker
-   * allows (e.g. Glenmont folds into Albany here).
+   * that list is the source of truth. Deliberately at city granularity, not
+   * the hamlet/neighborhood granularity GBP's picker allows (e.g. Glenmont
+   * folds into Albany here).
+   *
+   * TODO(shender): the Capital Region cluster below was expanded to on-site
+   * on 2026-09-14 when you relocated. MIRROR THIS IN THE GOOGLE BUSINESS
+   * PROFILE — schema alone does not move the local pack. GBP is what ranks.
    */
   serviceAreas: [
     { city: 'Miami', state: 'Florida', stateAbbr: 'FL', note: 'HQ — on-site & remote' },
-    { city: 'Albany', state: 'New York', stateAbbr: 'NY', note: 'remote' },
+    { city: 'Albany', state: 'New York', stateAbbr: 'NY', note: 'on-site & remote' },
+    { city: 'Schenectady', state: 'New York', stateAbbr: 'NY', note: 'on-site & remote' },
+    { city: 'Troy', state: 'New York', stateAbbr: 'NY', note: 'on-site & remote' },
+    { city: 'Colonie', state: 'New York', stateAbbr: 'NY', note: 'on-site & remote' },
+    { city: 'Latham', state: 'New York', stateAbbr: 'NY', note: 'on-site & remote' },
+    { city: 'Clifton Park', state: 'New York', stateAbbr: 'NY', note: 'on-site & remote' },
+    { city: 'Guilderland', state: 'New York', stateAbbr: 'NY', note: 'on-site & remote' },
+    { city: 'Cohoes', state: 'New York', stateAbbr: 'NY', note: 'on-site & remote' },
+    { city: 'Rensselaer', state: 'New York', stateAbbr: 'NY', note: 'on-site & remote' },
     { city: 'Bronx', state: 'New York', stateAbbr: 'NY', note: 'remote' },
-    { city: 'Troy', state: 'New York', stateAbbr: 'NY', note: 'remote' },
     { city: 'White Plains', state: 'New York', stateAbbr: 'NY', note: 'remote' },
     { city: 'Yonkers', state: 'New York', stateAbbr: 'NY', note: 'remote' },
     { city: 'New Rochelle', state: 'New York', stateAbbr: 'NY', note: 'remote' },
@@ -113,7 +124,7 @@ export const business = {
     sameAs: ['https://shenderramos.com'],
   },
 
-  pricing: '$15,000–$250,000+ per project; ongoing partnership retainers available',
+  pricing: 'Small-business websites and automation from $2,500; custom applications $15,000–$250,000+; ongoing partnership retainers available',
 
   differentiators: [
     'Bilingual English & Spanish service',
