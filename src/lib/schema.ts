@@ -73,7 +73,7 @@ export const organizationSchema = {
     'Fractional CTO services',
     'Small business software development',
   ],
-  priceRange: '$$$',
+  priceRange: '$$',
   currenciesAccepted: 'USD',
   paymentAccepted: 'Credit Card, Bank Transfer, ACH',
   openingHoursSpecification: business.openingHours.map((group) => ({
