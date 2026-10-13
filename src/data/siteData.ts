@@ -84,6 +84,86 @@ export const values: Value[] = [
 
 export const customers: Customer[] = [
   {
+    slug: 'flexdash',
+    name: 'FlexDash',
+    url: 'https://www.flexdash.app',
+    description:
+      'Mobile app for gig economy drivers — automatic mileage tracking, AI-powered earnings scanning, bank deposit reconciliation, and Amazon Flex 40-hour cap monitoring across Uber, Lyft, DoorDash, and Instacart',
+    category: 'Mobile App',
+    challenge:
+      'Gig drivers stitching together income from Uber, Lyft, DoorDash, Instacart, and Amazon Flex had no single place to see real earnings vs. mileage vs. bank deposits — and Amazon Flex&rsquo;s 40-hour rolling cap was costing drivers blocks they did not know they were close to losing.',
+    solution:
+      'Built a cross-platform mobile app with automatic mileage tracking, OCR/AI-driven earnings scanning from screenshots, bank deposit reconciliation, and a rolling 40-hour cap monitor for Amazon Flex drivers. Designed for daily use in the car.',
+    stack: ['Flutter', 'Firebase', 'AI/OCR APIs', 'iOS & Android'],
+    outcome:
+      'Live on both App Store and Play Store. Used daily by gig drivers to maximize earnings and stay compliant with platform rules.',
+    hasDetailPage: true,
+  },
+  {
+    slug: 'tiendacloud',
+    name: 'TiendaCloud',
+    url: 'https://tiendacloud.app',
+    description:
+      'Cloud-based point-of-sale, inventory, and DGII-compliant tax billing platform for small and medium retailers in the Dominican Republic',
+    category: 'SaaS Platform',
+    challenge:
+      'Dominican retailers — tiendas, boutiques, cell phone shops, restaurants, colmados, pharmacies — were stuck between manual record-keeping and POS software built for other markets. None of it issued NCF tax receipts, filed DGII&rsquo;s Formato 607, or handled the cash-and-fiado (store credit) sales culture common to Dominican small business.',
+    solution:
+      'Built TiendaCloud as a mobile-first, offline-capable PWA: point-of-sale, multi-branch inventory with audited transfers, WhatsApp-delivered invoices and quotes, IMEI tracking for phone retailers, a restaurant mode with table and tip management, per-customer credit limits, and automatic NCF receipts with monthly Formato 607 filings for the DGII.',
+    stack: ['Next.js', 'Supabase', 'PostgreSQL', 'PWA'],
+    outcome:
+      'Live SaaS product serving Dominican retailers across 14+ business types, with a 30-day free trial and subscription tiers from RD$890 to RD$3,990/month.',
+    hasDetailPage: true,
+  },
+  {
+    slug: 'jysmartsolution',
+    name: 'JY Smart Solutions',
+    url: 'https://jysmartsolution.com',
+    description:
+      'Bilingual-market business website for a Santo Domingo electronics retailer and repair shop — phones, accessories, air conditioning, TVs, and repair services',
+    category: 'Business Website',
+    challenge:
+      'JY Smart Solutions needed an online presence to complement its physical Santo Domingo storefront — a fast, mobile-first way for customers to browse product categories and repair services before calling or visiting.',
+    solution:
+      'Designed and built a Spanish-language marketing site as an installable PWA, with WhatsApp- and Facebook-optimized social sharing and a full catalog of products and repair services presented mobile-first for a Dominican audience.',
+    stack: ['React', 'Vite', 'PWA'],
+    outcome:
+      'Live marketing site for a Santo Domingo retailer, giving walk-in and phone customers a mobile-friendly way to browse products and repair services before visiting the store.',
+    hasDetailPage: true,
+  },
+  {
+    slug: 'drfactory',
+    name: 'DR Factory C+',
+    url: 'https://drfactorycigs.com',
+    description:
+      'Trilingual e-commerce and private-label platform for a premium handmade cigar factory in Santiago, Dominican Republic — catalog, brand configurator, and order tracking for buyers in the USA, Europe, and Latin America',
+    category: 'E-commerce Platform',
+    challenge:
+      'A Santiago cigar factory selling private-label production to international brands, lounges, and distributors was quoting every order by hand over WhatsApp. Buyers in the USA and Europe had no way to explore blends, ring finishes, and packaging options — or see what their own brand could look like — before starting a conversation.',
+    solution:
+      'Designed and built a Spanish, English, and French platform with an age-verification gate, a product catalog and cart, and a step-by-step private-label configurator (vitola, wrapper, ring finish, luxury packaging) that generates a professional PDF summary and sends the quote request straight to WhatsApp. Includes order tracking and USD exchange-rate pricing for international buyers.',
+    stack: ['React', 'TypeScript', 'TanStack Start', 'Tailwind CSS'],
+    outcome:
+      'Live platform that turns international private-label inquiries into structured, ready-to-quote requests, presenting the factory&rsquo;s craftsmanship to brands and distributors across three languages.',
+    hasDetailPage: true,
+  },
+  {
+    slug: 'tabla-jaladora',
+    name: 'Tabla Jaladora',
+    url: 'https://tablajaladora.com',
+    description:
+      'Mobile app landing page for a dynamic iOS/Android application featured in the App Store',
+    category: 'Mobile App',
+    challenge:
+      'A bilingual consumer app needed a marketing presence that converted Spanish-speaking and English-speaking visitors into installs from a single landing page.',
+    solution:
+      'Designed and built a bilingual mobile-app landing page with App Store / Play Store deep-links and conversion-focused above-the-fold copy.',
+    stack: ['React', 'iOS', 'Android', 'Bilingual UX'],
+    outcome:
+      'Live on both stores with a landing page tailored to a bilingual audience.',
+    hasDetailPage: true,
+  },
+  {
     slug: 'nurivion',
     name: 'Nurivion',
     url: 'https://nurivion.com',
@@ -100,19 +180,19 @@ export const customers: Customer[] = [
     hasDetailPage: true,
   },
   {
-    slug: 'flexdash',
-    name: 'FlexDash',
-    url: 'https://www.flexdash.app',
+    slug: 'runtimeclear',
+    name: 'RuntimeClear',
+    url: 'https://runtimeclear.com',
     description:
-      'Mobile app for gig economy drivers — automatic mileage tracking, AI-powered earnings scanning, bank deposit reconciliation, and Amazon Flex 40-hour cap monitoring across Uber, Lyft, DoorDash, and Instacart',
-    category: 'Mobile App',
+      'Open-source scanner and in-browser reporting tool that inventories Oracle Java installations for organizations responding to Java SE license reviews',
+    category: 'Developer Tool',
     challenge:
-      'Gig drivers stitching together income from Uber, Lyft, DoorDash, Instacart, and Amazon Flex had no single place to see real earnings vs. mileage vs. bank deposits — and Amazon Flex&rsquo;s 40-hour rolling cap was costing drivers blocks they did not know they were close to losing.',
+      'Organizations facing an Oracle Java license review had no fast way to inventory every Java install, container image, and CI pipeline across their infrastructure — and Oracle&rsquo;s per-employee subscription pricing makes an incomplete inventory expensive to get wrong, especially ahead of Oracle&rsquo;s 2026 licensing changes.',
     solution:
-      'Built a cross-platform mobile app with automatic mileage tracking, OCR/AI-driven earnings scanning from screenshots, bank deposit reconciliation, and a rolling 40-hour cap monitor for Amazon Flex drivers. Designed for daily use in the car.',
-    stack: ['Flutter', 'Firebase', 'AI/OCR APIs', 'iOS & Android'],
+      'Built RuntimeClear as an open-source, read-only scanner for Linux, macOS, and Windows, paired with an in-browser report that classifies every Java install against Oracle&rsquo;s published license terms and hands back a migration runbook to free OpenJDK builds.',
+    stack: ['Open-source scanner', 'Static site', 'OpenJDK migration tooling'],
     outcome:
-      'Live on both App Store and Play Store. Used daily by gig drivers to maximize earnings and stay compliant with platform rules.',
+      'Free scanner and summary available to any organization; a $149 full report and $399 MSP tier (up to 10 client organizations) for teams that need a documented compliance artifact, with 12-month report access and a 14-day refund guarantee.',
     hasDetailPage: true,
   },
   {
@@ -145,70 +225,6 @@ export const customers: Customer[] = [
     stack: ['React', 'iOS', 'Android', 'App Store Connect', 'Play Console'],
     outcome:
       'Live on both stores with a landing page geared for install-conversion.',
-    hasDetailPage: true,
-  },
-  {
-    slug: 'tabla-jaladora',
-    name: 'Tabla Jaladora',
-    url: 'https://tablajaladora.com',
-    description:
-      'Mobile app landing page for a dynamic iOS/Android application featured in the App Store',
-    category: 'Mobile App',
-    challenge:
-      'A bilingual consumer app needed a marketing presence that converted Spanish-speaking and English-speaking visitors into installs from a single landing page.',
-    solution:
-      'Designed and built a bilingual mobile-app landing page with App Store / Play Store deep-links and conversion-focused above-the-fold copy.',
-    stack: ['React', 'iOS', 'Android', 'Bilingual UX'],
-    outcome:
-      'Live on both stores with a landing page tailored to a bilingual audience.',
-    hasDetailPage: true,
-  },
-  {
-    slug: 'tiendacloud',
-    name: 'TiendaCloud',
-    url: 'https://tiendacloud.app',
-    description:
-      'Cloud-based point-of-sale, inventory, and DGII-compliant tax billing platform for small and medium retailers in the Dominican Republic',
-    category: 'SaaS Platform',
-    challenge:
-      'Dominican retailers — tiendas, boutiques, cell phone shops, restaurants, colmados, pharmacies — were stuck between manual record-keeping and POS software built for other markets. None of it issued NCF tax receipts, filed DGII&rsquo;s Formato 607, or handled the cash-and-fiado (store credit) sales culture common to Dominican small business.',
-    solution:
-      'Built TiendaCloud as a mobile-first, offline-capable PWA: point-of-sale, multi-branch inventory with audited transfers, WhatsApp-delivered invoices and quotes, IMEI tracking for phone retailers, a restaurant mode with table and tip management, per-customer credit limits, and automatic NCF receipts with monthly Formato 607 filings for the DGII.',
-    stack: ['Next.js', 'Supabase', 'PostgreSQL', 'PWA'],
-    outcome:
-      'Live SaaS product serving Dominican retailers across 14+ business types, with a 30-day free trial and subscription tiers from RD$890 to RD$3,990/month.',
-    hasDetailPage: true,
-  },
-  {
-    slug: 'runtimeclear',
-    name: 'RuntimeClear',
-    url: 'https://runtimeclear.com',
-    description:
-      'Open-source scanner and in-browser reporting tool that inventories Oracle Java installations for organizations responding to Java SE license reviews',
-    category: 'Developer Tool',
-    challenge:
-      'Organizations facing an Oracle Java license review had no fast way to inventory every Java install, container image, and CI pipeline across their infrastructure — and Oracle&rsquo;s per-employee subscription pricing makes an incomplete inventory expensive to get wrong, especially ahead of Oracle&rsquo;s 2026 licensing changes.',
-    solution:
-      'Built RuntimeClear as an open-source, read-only scanner for Linux, macOS, and Windows, paired with an in-browser report that classifies every Java install against Oracle&rsquo;s published license terms and hands back a migration runbook to free OpenJDK builds.',
-    stack: ['Open-source scanner', 'Static site', 'OpenJDK migration tooling'],
-    outcome:
-      'Free scanner and summary available to any organization; a $149 full report and $399 MSP tier (up to 10 client organizations) for teams that need a documented compliance artifact, with 12-month report access and a 14-day refund guarantee.',
-    hasDetailPage: true,
-  },
-  {
-    slug: 'jysmartsolution',
-    name: 'JY Smart Solutions',
-    url: 'https://jysmartsolution.com',
-    description:
-      'Bilingual-market business website for a Santo Domingo electronics retailer and repair shop — phones, accessories, air conditioning, TVs, and repair services',
-    category: 'Business Website',
-    challenge:
-      'JY Smart Solutions needed an online presence to complement its physical Santo Domingo storefront — a fast, mobile-first way for customers to browse product categories and repair services before calling or visiting.',
-    solution:
-      'Designed and built a Spanish-language marketing site as an installable PWA, with WhatsApp- and Facebook-optimized social sharing and a full catalog of products and repair services presented mobile-first for a Dominican audience.',
-    stack: ['React', 'Vite', 'PWA'],
-    outcome:
-      'Live marketing site for a Santo Domingo retailer, giving walk-in and phone customers a mobile-friendly way to browse products and repair services before visiting the store.',
     hasDetailPage: true,
   },
   {
