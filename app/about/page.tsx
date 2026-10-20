@@ -5,15 +5,15 @@ import { breadcrumbSchema, profilePageSchema } from '@/lib/schema';
 import { values } from '@/data/siteData';
 
 export const metadata: Metadata = {
-  title: 'About Tech Build Dreams — Latino-Owned Miami Software Agency',
+  title: 'About Us — Latino-Owned Miami Software Company',
   description:
-    'Founded by Shender Ramos — a Latino software engineer with 10+ years of experience and dual degrees in Computer Science and Information Technology. Bilingual EN/ES. Miami-based.',
+    'Latino-owned Miami software company. Shender Ramos, a senior engineer with 10+ years, directs AI coding agents and reviews every change. English or Spanish.',
   alternates: { canonical: '/about' },
   openGraph: {
     type: 'profile',
-    title: 'About Tech Build Dreams — Latino-Owned Miami Software Agency',
+    title: 'About Us — Latino-Owned Miami Software Company | Tech Build Dreams',
     description:
-      'Founded by Shender Ramos. 10+ years of senior software engineering. Bilingual EN/ES.',
+      'Shender Ramos: 10+ years of engineering, directing AI coding agents, reviewing every change. For small businesses, in English or Spanish.',
     url: '/about',
   },
 };
@@ -49,9 +49,9 @@ export default function AboutPage() {
             A Senior Engineer, Not a Sales Agency
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Tech Build Dreams is a Miami-based, Latino-owned software and AI agency founded in 2023
-            by Shender Ramos — a senior software engineer with 10+ years of experience building
-            production systems for startups through enterprise clients.
+            Tech Build Dreams is a Latino-owned, Miami-based software and AI partner for small and
+            medium-sized businesses, founded in 2023 by Shender Ramos — a senior software engineer with 10+
+            years of experience building production systems.
           </p>
         </Container>
       </section>
@@ -62,43 +62,43 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900">Why we exist</h2>
             <p>
               Most small businesses get the worst end of the software market. The good engineers
-              go to FAANG or funded startups. What&rsquo;s left for the local roofing company, the
-              two-person SaaS, or the bilingual service business is offshore commodity work and
-              high-pressure agency sales decks.
+              go to big tech or funded startups. What&rsquo;s left for the local roofing company, the
+              family restaurant, or the bilingual service business is offshore commodity work,
+              high-pressure agency sales decks, and developers who stop answering halfway through.
             </p>
             <p>
               We started Tech Build Dreams to put senior, hands-on engineering in reach of the
-              founders who actually need it most — and to do it in English <em>or</em> Spanish,
+              small business owners who actually need it most — and to do it in English <em>or</em> Spanish,
               without losing nuance in translation.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 pt-4">Who builds your project</h2>
             <p>
-              The same senior engineer you talk to on the discovery call writes the architecture,
-              reviews the code, and ships the release. There is no account-manager layer, no
-              offshore team you&rsquo;ve never met, no junior dev billed at senior rates. That&rsquo;s
-              the point of the business.
+              The same senior engineer you talk to on the discovery call designs the architecture,
+              directs a team of AI coding agents, reviews every change, and ships the release.
+              AI does much of the typing; a person decides what gets built, tests it, and answers
+              for it. No account managers, no offshore hand-offs, no junior dev billed at senior
+              rates. That&rsquo;s the point of the business.
             </p>
             <p>
-              Founder Shender Ramos holds dual degrees in Computer Science and Information
-              Technology from Northern Essex Community College and has 10+ years of full-stack
+              Founder Shender Ramos holds two associate degrees, in Computer Science and in Information
+              Technology, from Northern Essex Community College and has 10+ years of full-stack
               experience across React, Spring Boot, Swift, Flutter, AWS, and AI integration.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 pt-4">Where we work</h2>
             <p>
               Headquartered at <strong>2125 Biscayne Blvd, Ste 204, Miami, FL 33137</strong>, we
-              serve clients on-site in Miami and South Florida and remotely across the United
-              States — including ongoing engagements in Albany NY, Bronx NY, Boston, and the
-              broader Massachusetts area. If you&rsquo;re anywhere in the US and need senior
-              software or AI talent, we work with you.
+              serve small businesses on-site in Miami and South Florida and across New York&rsquo;s
+              Capital Region — Albany, Schenectady, Troy, Colonie, Latham, Clifton Park,
+              Guilderland, Cohoes and Rensselaer — and remotely across the United States, including
+              the Bronx, Westchester, Boston, and New Jersey.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 pt-4">Bilingual by design</h2>
             <p>
-              Every founder call, every architecture review, every release walk-through can run in
-              English or Spanish. For teams operating across the US and Latin America, this
-              removes the translation layer that usually slows down technology decisions.
+              Every call, every update, every release walk-through can run in English or Spanish.
+              If your team or your customers speak Spanish, nothing gets lost in translation.
             </p>
           </div>
         </Container>

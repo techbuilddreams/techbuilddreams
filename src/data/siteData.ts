@@ -5,80 +5,90 @@ export const services: Service[] = [
     icon: '🎨',
     title: 'Custom Web Development',
     description:
-      'Custom React web platforms, SaaS applications, and Spring Boot APIs — built to scale from MVP to enterprise. Miami-based, serving clients remotely across the United States.',
+      'Outdated website that doesn\'t show up on Google? Drowning in spreadsheets? We build fast business websites, customer portals, and custom tools that replace the copy-paste — and you own the code.',
     features: [
-      'React & TypeScript frontends',
-      'Spring Boot REST APIs',
-      'PostgreSQL & AWS infrastructure',
-      'Customer portals & internal tools',
+      'Business websites that show up on Google',
+      'Customer portals & online booking',
+      'Internal tools that replace spreadsheets',
+      'Rescue for half-finished or AI-built apps',
     ],
     href: '/services/web-development',
-    timeline: '8–16 weeks',
+    badge: 'Websites, portals & tools',
   },
   {
     icon: '📱',
     title: 'Mobile App Development',
     description:
-      'Native iOS apps in Swift and cross-platform iOS/Android apps in Flutter. App Store deployment, in-app subscriptions, and analytics built in.',
+      'Need an app for your business? We build iPhone and Android apps for your customers or your crew — and handle the App Store and Google Play submission for you.',
     features: [
-      'Native iOS (Swift)',
-      'Flutter cross-platform (iOS + Android)',
-      'App Store & Play Store deployment',
-      'RevenueCat subscriptions & AdMob',
+      'iPhone & Android from one build',
+      'App Store & Google Play submission',
+      'Bookings, payments & push notifications',
+      'Updates and fixes after launch',
     ],
     href: '/services/mobile-apps',
-    timeline: '6–12 weeks',
+    badge: 'iOS & Android',
   },
   {
     icon: '🤖',
-    title: 'AI Voice Agents & Automation',
+    title: 'AI Receptionist & Automation',
     description:
-      'Never miss a call, never lose revenue. Our 24/7 AI voice agents answer calls, capture leads, schedule appointments, and qualify customers — so your small business or service company captures every opportunity.',
+      'Keep missing calls while you\'re on a job? An AI receptionist answers 24/7 in English or Spanish, takes the customer\'s details, books the appointment, and texts back anyone who hung up.',
     features: [
-      '24/7 AI voice agents for inbound calls',
-      'Custom AI assistants & chatbots',
-      'Automated lead capture & follow-up',
-      'OpenAI-powered workflows',
+      '24/7 AI receptionist for inbound calls',
+      'Missed-call text-back',
+      'Automated booking & follow-ups',
+      'Website chat assistants',
     ],
     href: '/services/ai-voice-agents',
-    timeline: '4–8 weeks',
+    badge: '24/7 call coverage',
   },
   {
     icon: '🛡️',
-    title: 'Strategic Technology Partnership',
+    title: 'Fractional CTO & Tech Partner',
     description:
-      'Fractional CTO and ongoing technology leadership for founders and executives scaling beyond MVP. Proactive monitoring, architecture, and bilingual (English / Spanish) executive support.',
+      'A senior tech partner you can call before you sign a vendor contract, hire a developer, or replace a system — and when your tech breaks. Fractional CTO help on a monthly retainer, in English or Spanish.',
     features: [
-      'Fractional CTO & technology advisory',
-      'Proactive monitoring & scalability planning',
-      'Architecture & strategic consulting',
-      'Bilingual executive support (EN / ES)',
+      'A second opinion before you sign',
+      'Help hiring a developer or agency',
+      'Someone to call when tech breaks',
+      'Monitoring of the systems you rely on',
     ],
     href: '/services/fractional-cto',
-    timeline: 'Ongoing retainer',
+    badge: 'Ongoing retainer',
   },
 ];
 
 export const values: Value[] = [
   {
-    icon: '✨',
-    title: 'Premium Craftsmanship',
-    description: 'Beautiful, powerful technology built to excellence',
+    icon: '🔑',
+    title: 'You own it',
+    description: 'On custom builds, the code, the domain, and the accounts are in your name',
+  },
+  {
+    icon: '📝',
+    title: 'A fixed written quote',
+    description: 'A written quote before any work starts. It only changes if the scope does, and you agree first'
+  },
+  {
+    icon: '✅',
+    title: 'Milestones you approve',
+    description: 'You sign off on each step before we move to the next one',
+  },
+  {
+    icon: '👀',
+    title: 'Progress you can see',
+    description: 'Working software you can click through every week',
+  },
+  {
+    icon: '🧪',
+    title: 'Tested before it ships',
+    description: 'Every change tested and reviewed before your customers see it',
   },
   {
     icon: '🌎',
-    title: 'Bilingual Excellence',
-    description: 'World-class service in English & Spanish',
-  },
-  {
-    icon: '🤝',
-    title: 'Partnership Approach',
-    description: 'We hold your hand from vision to reality',
-  },
-  {
-    icon: '🚀',
-    title: 'Scalable Innovation',
-    description: 'Technology investments that grow with you',
+    title: 'English or Spanish',
+    description: 'Calls, updates, and the finished product in your language',
   },
 ];
 
@@ -112,7 +122,7 @@ export const customers: Customer[] = [
       'Built TiendaCloud as a mobile-first, offline-capable PWA: point-of-sale, multi-branch inventory with audited transfers, WhatsApp-delivered invoices and quotes, IMEI tracking for phone retailers, a restaurant mode with table and tip management, per-customer credit limits, and automatic NCF receipts with monthly Formato 607 filings for the DGII.',
     stack: ['Next.js', 'Supabase', 'PostgreSQL', 'PWA'],
     outcome:
-      'Live SaaS product serving Dominican retailers across 14+ business types, with a 30-day free trial and subscription tiers from RD$890 to RD$3,990/month.',
+      'Live SaaS product serving Dominican retailers across 14+ business types, with a free trial and monthly subscription plans.',
     hasDetailPage: true,
   },
   {
@@ -176,7 +186,7 @@ export const customers: Customer[] = [
       'Designed and built Nurivion as a multi-tenant SaaS platform: a customer-facing chat widget powered by OpenAI, a configurable agent backend, and a business-owner dashboard for transcripts, leads, and bookings. Deployed on AWS with PostgreSQL.',
     stack: ['React', 'TypeScript', 'Spring Boot', 'PostgreSQL', 'AWS', 'OpenAI APIs'],
     outcome:
-      'Live SaaS product serving real customers. Powers the chat widget on Tech Build Dreams itself ("Dreamer") and a growing roster of small-business clients.',
+      'Live SaaS product serving real small-business customers.',
     hasDetailPage: true,
   },
   {
@@ -192,7 +202,7 @@ export const customers: Customer[] = [
       'Built RuntimeClear as an open-source, read-only scanner for Linux, macOS, and Windows, paired with an in-browser report that classifies every Java install against Oracle&rsquo;s published license terms and hands back a migration runbook to free OpenJDK builds.',
     stack: ['Open-source scanner', 'Static site', 'OpenJDK migration tooling'],
     outcome:
-      'Free scanner and summary available to any organization; a $149 full report and $399 MSP tier (up to 10 client organizations) for teams that need a documented compliance artifact, with 12-month report access and a 14-day refund guarantee.',
+      'Free scanner and summary available to any organization, plus paid full reports and an MSP tier for teams that need a documented compliance artifact, backed by a refund guarantee.',
     hasDetailPage: true,
   },
   {
@@ -245,17 +255,22 @@ export const faqs: FAQ[] = [
   {
     question: 'What services does Tech Build Dreams offer?',
     answer:
-      'Tech Build Dreams offers custom web platform development, native iOS and Flutter mobile app development, AI voice agents and automation, and ongoing strategic technology partnerships. We serve startups through enterprise clients in both English and Spanish.',
+      'We build websites that show up on Google, custom tools that get you out of spreadsheets, iPhone and Android apps, and AI receptionists and automations that answer calls and handle booking and follow-ups. We also stay on as your senior tech partner — the person you call when your tech breaks. We work with small and medium-sized businesses — restaurants, contractors, salons, clinics, shops, and service companies — in English or Spanish.',
   },
   {
-    question: 'What is an AI voice agent and how can it help my business?',
+    question: 'I keep missing calls. Can an AI receptionist help?',
     answer:
-      'An AI voice agent is a 24/7 automated system that answers calls, captures leads, schedules appointments, and handles customer inquiries on your behalf — so your business never misses a revenue opportunity, even outside business hours.',
+      'Yes. An AI receptionist (also called an AI voice agent) answers your phone 24/7, takes the caller\'s details, answers common questions, books appointments on your calendar, and texts back anyone who hung up. When a call needs a person, it hands off to you. It can speak English and Spanish.',
+  },
+  {
+    question: 'Do you use AI to build software?',
+    answer:
+      'Yes, and we\'re open about it. Shender Ramos, a senior engineer with 10+ years of experience, designs every project and directs a team of AI coding agents to do much of the typing. He reviews every change, it gets tested before it ships, and he is the person you talk to and the one accountable for the result. AI is how the work gets done; a senior engineer decides what gets built and signs off on it. If you tried building something with AI yourself and it broke, we can pick it up from there.',
   },
   {
     question: 'How long does it take to build a custom web application?',
     answer:
-      'Custom web applications typically take 8–16 weeks from discovery to launch. Mobile apps take 6–12 weeks, and AI integrations take 4–8 weeks. Every project starts with a free discovery call to define scope, timeline, and investment parameters.',
+      'It depends on scope, so we never guess before we understand the problem. Every project starts with a free discovery call; you then get a written scope with milestones and a delivery date you approve before any work begins. Smaller automations and websites move quickly; full platforms ship in phases so you see working software early.',
   },
   {
     question: 'Does Tech Build Dreams work with Spanish-speaking clients?',
@@ -265,49 +280,49 @@ export const faqs: FAQ[] = [
   {
     question: 'Where is Tech Build Dreams located and what areas do you serve?',
     answer:
-      'Tech Build Dreams LLC is headquartered at 2125 Biscayne Blvd, Suite 204, Miami, Florida 33137. We serve clients locally in Miami and South Florida, and remotely throughout the United States — including Albany NY, Bronx NY, Boston and the rest of Massachusetts, and anywhere in the country that needs senior software talent and AI integration.',
+      'Tech Build Dreams LLC is headquartered at 2125 Biscayne Blvd, Suite 204, Miami, Florida 33137. We work on-site in Miami and in New York\'s Capital Region (Albany, Schenectady, Troy, Colonie, Latham, Clifton Park, Guilderland, Cohoes and Rensselaer), and remotely with small businesses across the United States — including the Bronx, Westchester, Boston, and New Jersey.',
   },
   {
     question: 'What technologies does Tech Build Dreams use?',
     answer:
-      "Our stack includes React and Spring Boot for web applications, Swift and Flutter for mobile apps, AWS for cloud infrastructure, PostgreSQL for databases, and OpenAI APIs for AI-powered features. We select the best technology for each client's specific needs.",
+      "Proven, widely used tools, so you're never stuck with something only one person can maintain: React and Next.js for websites and web apps, Spring Boot for back ends, Swift and Flutter for mobile apps, PostgreSQL and Firebase for data, AWS and Vercel for hosting, and leading AI models for receptionists and automations. We pick what fits your business, not what's trendy.",
   },
   {
     question: 'How much does it cost to build a custom application?',
     answer:
-      'It depends on scope. A focused small-business website or automation typically starts around $2,500. Custom applications and platforms generally run $15,000 to $250,000+ depending on complexity. We also offer ongoing technology partnership retainers. You get a fixed number after one conversation — no surprises, no hourly creep.',
+      'It depends on scope, and we size every engagement for small and medium-sized businesses — from a focused website or automation to a full custom platform, plus ongoing partnership retainers. You get a written quote after one free discovery call, and no hourly billing. If the scope changes along the way, we agree on the new price in writing before any extra work.',
   },
   {
     question: 'How do I get started with Tech Build Dreams?',
     answer:
-      'Getting started is simple. Contact us at info@techbuilddreams.com or fill out the contact form on our website. We guarantee a response within 24 hours and offer a free 15-minute discovery call to explore your vision and project requirements.',
+      'Tell us what\'s slowing your business down — by email at info@techbuilddreams.com or through the contact form on this site. We respond within 24 hours and set up a free 15-minute call, in English or Spanish, to see whether we\'re the right fit.',
   },
 ];
 
 export const processSteps: ProcessStep[] = [
   {
     step: '1',
-    title: 'Discovery & Vision',
+    title: 'Free 15-minute call',
     description:
-      'We dive deep into your goals, challenges, and market opportunities to craft the perfect strategy.',
+      'Tell us what\'s slowing your business down — missed calls, spreadsheets, a website nobody finds. In English or Spanish.',
   },
   {
     step: '2',
-    title: 'Strategic Design',
+    title: 'A fixed written quote',
     description:
-      'Architect a solution that aligns with your vision and positions you for sustainable growth.',
+      'A written quote and a list of milestones before any work starts. If the scope changes, we agree on it in writing first.',
   },
   {
     step: '3',
-    title: 'Expert Execution',
+    title: 'Weekly progress you can see',
     description:
-      'Build exceptional technology with transparent progress tracking and regular milestone deliveries.',
+      'Working software you can click through every week. You approve each milestone before we move on, and every change is tested before it ships.',
   },
   {
     step: '4',
-    title: 'Continued Success',
+    title: 'Launch — and you own it',
     description:
-      'Launch with confidence and ongoing partnership to ensure your technology evolves with your ambitions.',
+      'On custom builds, the code, the domain, and the accounts are in your name. We stay on call if you want us to.',
   },
 ];
 

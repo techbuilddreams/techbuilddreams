@@ -59,6 +59,7 @@ export const organizationSchema = {
     'Swift',
     'Flutter',
     'Mobile App Development',
+    'AI Receptionists',
     'AI Voice Agents',
     'AI Automation',
     'OpenAI APIs',
@@ -166,7 +167,7 @@ export const websiteSchema = {
   url: SITE_URL,
   name: 'Tech Build Dreams LLC',
   description:
-    'Technology That Builds Dreams — Miami software development, mobile app development, and AI voice agents for businesses ready to scale.',
+    'Miami software development, mobile apps, AI receptionists and automations for small and medium-sized businesses.',
   publisher: { '@id': ORG_ID },
   inLanguage: 'en',
 };

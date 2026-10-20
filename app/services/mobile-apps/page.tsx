@@ -3,14 +3,14 @@ import { ServicePage } from '@/components/templates/ServicePage';
 import { SERVICE_IDS } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Mobile App Developer Miami — Native iOS (Swift) & Flutter Cross-Platform',
+  title: 'Mobile App Development in Miami & Albany',
   description:
-    'Native iOS apps in Swift and cross-platform iOS/Android apps in Flutter. App Store deployment, RevenueCat subscriptions, AdMob monetization. Miami-based, US-wide remote. Bilingual.',
+    'Need an app for your business? iPhone and Android apps for small businesses in Miami and Albany, NY, including App Store and Google Play launch.',
   alternates: { canonical: '/services/mobile-apps' },
   openGraph: {
-    title: 'Mobile App Developer Miami — Native iOS & Flutter Cross-Platform',
+    title: 'Mobile App Development in Miami & Albany | Tech Build Dreams',
     description:
-      'Native Swift iOS and Flutter cross-platform apps. App Store launch, subscriptions, monetization handled end-to-end.',
+      'iPhone and Android apps for small businesses, from first build to App Store and Google Play launch.',
     url: '/services/mobile-apps',
   },
 };
@@ -23,7 +23,7 @@ export default function MobileAppsPage() {
       h1="Mobile Apps Built for the App Store, Not Just for Demos"
       tagline="Mobile App Development · iOS & Flutter"
       intro="Native iOS apps in Swift and cross-platform iOS/Android apps in Flutter, designed and built for products that need to ship — and then keep shipping. App Store submission, subscriptions, push notifications, analytics, and ongoing release management included, not bolted on later."
-      audience="Founders launching a consumer app, service businesses adding a mobile channel, and gig-economy / fintech / health / lifestyle teams that need a polished iOS or Android product to compete on the store."
+      audience="Small and medium-sized businesses that need an app for their customers or their crew — bookings, loyalty, ordering, field work — and owners launching an app of their own who need it to actually get through App Store review."
       features={[
         'Native iOS development in Swift / SwiftUI',
         'Cross-platform iOS + Android in Flutter (single codebase)',
@@ -39,19 +39,17 @@ export default function MobileAppsPage() {
         'Crash-free release pipeline with proper symbol uploads and analytics from day one',
         'Roadmap for v1.1, v1.2 — we plan past launch, not just to launch',
       ]}
-      timeline="6–12 weeks from kickoff to App Store submission"
-      priceRange="$15,000 – $120,000+ depending on platform and scope"
+      engagement="Discovery call, written scope, then milestones through App Store launch"
+      investment="Written quote after a free discovery call, sized for small and medium-sized businesses"
       schema={{
         id: SERVICE_IDS.mobile,
         name: 'Mobile App Development',
         url: '/services/mobile-apps',
         description:
-          'Native iOS apps built in Swift and cross-platform iOS/Android apps in Flutter. App Store deployment, RevenueCat subscriptions, and AdMob monetization included. Typical timeline 6–12 weeks.',
+          'Native iOS apps built in Swift and cross-platform iOS/Android apps in Flutter. App Store deployment, RevenueCat subscriptions, and AdMob monetization included.',
         serviceType: 'Mobile Application Development',
         category: 'iOS, Android, Flutter',
-        audience: 'Startups and businesses launching consumer mobile products',
-        priceMin: 15000,
-        priceMax: 120000,
+        audience: 'Small and medium-sized businesses launching mobile apps',
       }}
       faqs={[
         {
@@ -77,7 +75,7 @@ export default function MobileAppsPage() {
       ]}
       related={[
         { href: '/services/web-development', label: 'Custom Web Development' },
-        { href: '/services/ai-voice-agents', label: 'AI Voice Agents' },
+        { href: '/services/ai-voice-agents', label: 'AI Receptionist & Automation' },
         { href: '/portfolio', label: 'Mobile Apps in Our Portfolio' },
       ]}
     />

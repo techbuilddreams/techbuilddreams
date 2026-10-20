@@ -100,7 +100,7 @@ export function renderOgImage({ eyebrow, title }: OgImageInput): ImageResponse {
 export function renderServiceOgImage(href: string): ImageResponse {
   const service = services.find((s) => s.href === href);
   return renderOgImage({
-    eyebrow: service ? service.timeline : 'Services',
+    eyebrow: service ? service.badge : 'Services',
     title: service?.title ?? 'Web, Mobile & AI Services',
   });
 }

@@ -16,13 +16,6 @@ function portfolioUrl(customer: (typeof customers)[number]): string {
   return customer.hasDetailPage ? absUrl(`/portfolio/${customer.slug}`) : customer.url;
 }
 
-/** Retainer services have no "timeline" in the fixed-duration sense. */
-function timelinePhrase(timeline: string): string {
-  return /ongoing|retainer/i.test(timeline)
-    ? `Engagement: ${timeline}.`
-    : `Typical timeline ${timeline}.`;
-}
-
 function serviceAreaLines(): string[] {
   return business.serviceAreas.map((area) =>
     area.city ? `${area.city}, ${area.state} (${area.note})` : `${area.state} (${area.note})`,
@@ -49,7 +42,7 @@ export function buildLlmsTxt(): string {
   lines.push('');
   for (const service of services) {
     lines.push(
-      `- [${service.title}](${absUrl(service.href)}): ${service.description} ${timelinePhrase(service.timeline)}`,
+      `- [${service.title}](${absUrl(service.href)}): ${service.description}`,
     );
   }
   lines.push('');
@@ -121,7 +114,7 @@ export function buildAiTxt(): string {
 
   lines.push('Services:');
   for (const service of services) {
-    lines.push(`- ${service.title} (${absUrl(service.href)}) — ${service.timeline}`);
+    lines.push(`- ${service.title} (${absUrl(service.href)}) — ${service.badge}`);
   }
   lines.push('');
 

@@ -23,8 +23,8 @@ const serviceLinks = [
   { href: '/services', label: 'All Services' },
   { href: '/services/web-development', label: 'Custom Web Development' },
   { href: '/services/mobile-apps', label: 'Mobile App Development' },
-  { href: '/services/ai-voice-agents', label: 'AI Voice Agents & Automation' },
-  { href: '/services/fractional-cto', label: 'Strategic Technology Partnership' },
+  { href: '/services/ai-voice-agents', label: 'AI Receptionist & Automation' },
+  { href: '/services/fractional-cto', label: 'Fractional CTO & Tech Partner' },
 ];
 
 export const Footer: React.FC = () => (

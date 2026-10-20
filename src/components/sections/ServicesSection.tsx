@@ -10,8 +10,8 @@ export const ServicesSection: React.FC = () => (
   <section id={SECTION_IDS.HOW_WE_HELP} className="py-20 bg-gray-50">
     <Container>
       <SectionHeader
-        title="Web, Mobile & AI Services for Miami Businesses"
-        subtitle="Custom software, native mobile apps, and 24/7 AI voice agents — from MVP to enterprise, delivered remotely across the United States."
+        title="How We Help Small Businesses"
+        subtitle="Websites that show up on Google, apps for your customers, an AI receptionist that answers every call, and a senior tech partner to call when something breaks — on-site in Miami and New York's Capital Region, remote across the US."
       />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -25,7 +25,7 @@ export const ServicesSection: React.FC = () => (
               {service.title}
             </h3>
             <p className="text-sm text-blue-600 font-medium mb-4 text-center">
-              {service.timeline}
+              {service.badge}
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed text-sm">{service.description}</p>
 
@@ -54,7 +54,7 @@ export const ServicesSection: React.FC = () => (
           href="/services"
           className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
         >
-          Compare all services, timelines &amp; pricing
+          Compare all services
           <ArrowRight className="w-4 h-4 ml-1" />
         </Link>
       </div>
