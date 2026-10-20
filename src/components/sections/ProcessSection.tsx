@@ -9,7 +9,7 @@ export const ProcessSection: React.FC = () => (
     <Container>
       <SectionHeader
         title="How We Work Together"
-        subtitle="A refined process built on trust, transparency, and exceptional results. Strategic partnership from vision to victory."
+        subtitle="A written quote, milestones you approve, and custom software you own. If the scope changes, we agree on it in writing first."
       />
 
       <div className="grid md:grid-cols-4 gap-8">

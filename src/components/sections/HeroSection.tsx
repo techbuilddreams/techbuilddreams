@@ -15,19 +15,23 @@ export const HeroSection: React.FC = () => (
         </span>
       </div>
 
+      <p className="text-lg md:text-xl text-gray-700 font-medium mb-4">
+        Missing calls? Website stuck in 2015? Drowning in spreadsheets?
+      </p>
+
       <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-        Miami Software Development,
-        <span className="block text-blue-600">Mobile Apps & AI Voice Agents</span>
+        Miami software development, AI receptionists &amp; automations
+        <span className="block text-blue-600">for small and medium-sized businesses</span>
       </h1>
 
       <p className="text-xl md:text-2xl text-gray-600 mb-4 leading-relaxed max-w-3xl mx-auto">
-        <strong className="text-gray-900">Tech Build Dreams is a Latino-owned, bilingual (EN/ES) software agency based in Miami.</strong>{' '}
-        We build custom React web platforms, native iOS &amp; Flutter mobile apps, and 24/7 AI
-        voice agents for small businesses across the United States.
+        <strong className="text-gray-900">Websites &amp; automations delivered in weeks, not months.</strong>{' '}
+        Custom apps quoted in writing after a free 15-minute call. No hourly billing.
       </p>
 
-      <p className="text-base md:text-lg text-gray-500 italic mb-8">
-        Technology That Builds Dreams.
+      <p className="text-base md:text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+        A senior engineer directing a team of AI agents. Every change tested and reviewed.
+        English or Spanish. Latino-owned, based in Miami and New York&rsquo;s Capital Region.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -44,7 +48,7 @@ export const HeroSection: React.FC = () => (
         </Link>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {values.map((value, index) => (
           <div key={index} className="text-center p-4">
             <div className="text-3xl mb-2">{value.icon}</div>
