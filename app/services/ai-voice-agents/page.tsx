@@ -3,14 +3,14 @@ import { ServicePage } from '@/components/templates/ServicePage';
 import { SERVICE_IDS } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'AI Voice Agent for Small Business — 24/7 Calls, Leads & Bookings',
+  title: 'AI Receptionist for Small Business',
   description:
-    'AI voice agents that answer your phone 24/7, capture leads, qualify customers, and book appointments — so your small business never misses revenue. Built on OpenAI, deployed in days.',
+    'Missing calls? An AI receptionist answers 24/7, captures leads, books appointments and texts back missed callers, in English or Spanish. Miami & Albany.',
   alternates: { canonical: '/services/ai-voice-agents' },
   openGraph: {
-    title: 'AI Voice Agent for Small Business — 24/7 Calls, Leads & Bookings',
+    title: 'AI Receptionist for Small Business | Tech Build Dreams',
     description:
-      'Never miss a call. Our AI voice agents answer 24/7, capture leads, and book appointments for service businesses.',
+      'Never miss a call. An AI receptionist answers 24/7, captures leads, and books appointments for small businesses.',
     url: '/services/ai-voice-agents',
   },
 };
@@ -19,9 +19,9 @@ export default function AiVoiceAgentsPage() {
   return (
     <ServicePage
       slug="ai-voice-agents"
-      title="AI Voice Agents & Automation"
-      h1="An AI Voice Agent That Answers Every Call — So You Never Miss Revenue"
-      tagline="AI Voice Agents · 24/7 Coverage"
+      title="AI Receptionist & Automation"
+      h1="An AI Receptionist That Answers Every Call — So You Stop Losing Customers"
+      tagline="AI Receptionist · 24/7 Coverage"
       intro="Most service businesses lose more revenue to missed calls than to bad marketing. We build AI voice agents that pick up your phone 24/7, ask the right qualifying questions, capture lead details into your CRM, and book appointments on your calendar — in English or Spanish, in your business&rsquo;s voice."
       audience="Service businesses (roadside, HVAC, plumbing, legal intake, medical, real estate, home services) and small teams who are losing leads after-hours, on weekends, or while they are on a job. Anyone whose phone rings more often than someone can pick it up."
       features={[
@@ -36,19 +36,19 @@ export default function AiVoiceAgentsPage() {
       outcomes={[
         'Stop losing after-hours and weekend leads to voicemail',
         'Free your team from low-value qualifying calls',
-        'A measurable lift in booked appointments within the first 30 days',
-        'A defensible competitive edge over local competitors still using voicemail',
+        'Booking and follow-ups that happen automatically, not when someone remembers',
+        'Callers get an answer instead of voicemail — and call you, not the next business on Google',
       ]}
-      timeline="4–8 weeks from discovery to live deployment"
-      priceRange="Setup $3,000 – $15,000 + monthly usage; volume-based pricing"
+      engagement="We map your call scenarios, demo the agent live, then go live"
+      investment="One-time setup plus usage that scales with your call volume — written quote after a free discovery call, sized for small and medium-sized businesses"
       schema={{
         id: SERVICE_IDS.aiVoice,
-        name: 'AI Voice Agents & Automation',
+        name: 'AI Receptionist & Automation',
         url: '/services/ai-voice-agents',
         description:
-          '24/7 AI voice agents that answer calls, capture leads, schedule appointments, and qualify customers — so your business never misses revenue. Includes AI chatbots, lead-capture automation, and OpenAI-powered workflows. Typical timeline 4–8 weeks.',
+          '24/7 AI receptionists that answer calls, capture leads, schedule appointments, and qualify customers — so your business never misses a call. Includes website chat assistants, missed-call text-back, and automated booking and follow-ups.',
         serviceType: 'Artificial Intelligence Integration',
-        category: 'AI Voice Agents, Automation, Chatbots',
+        category: 'AI Receptionist, AI Voice Agents, Automation, Chatbots',
         audience:
           'Small businesses, service businesses, and growing teams losing leads outside business hours',
       }}
@@ -56,17 +56,17 @@ export default function AiVoiceAgentsPage() {
         {
           question: 'How much does an AI voice agent cost for a small business?',
           answer:
-            'Setup ranges from $3,000 for a single-purpose agent to $15,000 for multi-intent, multi-language agents with CRM and calendar integrations. Monthly usage is typically $0.10–$0.40 per call minute depending on voice quality and provider. Most small-business clients land in $200–$800/month after launch.',
+            'Two parts: a one-time setup, and monthly usage that scales with how many minutes the agent is on the phone. Setup depends on how many call types it handles, whether it speaks English and Spanish, and what it connects to (CRM, calendar, SMS). We map your call scenarios on a free discovery call and give you a fixed setup quote plus a usage estimate built from your real call volume.',
         },
         {
           question: 'Does it actually sound human?',
           answer:
-            'Yes. We use the highest-quality voice models available (ElevenLabs, OpenAI Realtime, Cartesia depending on use case). Callers are told they are speaking with an AI assistant — required for compliance — and most still rate the conversations as smooth and helpful. We will run a live demo with you before you commit.',
+            'Yes. We use the highest-quality voice models available (ElevenLabs, OpenAI Realtime, Cartesia depending on use case). Callers are told they are speaking with an AI assistant — required for compliance. We will run a live demo with you before you commit.',
         },
         {
           question: 'Can the agent speak Spanish?',
           answer:
-            'Yes, natively. Our agents can detect the caller&rsquo;s language and respond in English or Spanish, or you can configure separate phone numbers per language. Bilingual coverage is a core differentiator — most agency-built agents are English-only.',
+            'Yes, natively. Our agents can detect the caller&rsquo;s language and respond in English or Spanish, or you can configure separate phone numbers per language.',
         },
         {
           question: 'What happens if the AI cannot handle a call?',
@@ -76,12 +76,12 @@ export default function AiVoiceAgentsPage() {
         {
           question: 'How long until it is live?',
           answer:
-            '4–8 weeks for a fully integrated agent. Simpler call-screening agents can be live in 2 weeks. We always start with a discovery call to map call scenarios before quoting timeline.',
+            'Simple call-screening agents go live fast; fully integrated agents with booking and CRM take longer. We start with a discovery call to map your call scenarios, then give you a go-live date in writing.',
         },
       ]}
       related={[
         { href: '/services/web-development', label: 'Custom Web Development' },
-        { href: '/services/fractional-cto', label: 'Fractional CTO' },
+        { href: '/services/fractional-cto', label: 'Fractional CTO & Tech Partner' },
         { href: '/portfolio/nurivion', label: 'See Nurivion — AI Support Platform' },
       ]}
     />

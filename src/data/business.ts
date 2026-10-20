@@ -43,7 +43,7 @@ export const business = {
   languageNames: 'English, Spanish',
 
   description:
-    'Software development and AI agency with offices in Miami, Florida and on-site service across New York\u2019s Capital Region \u2014 Albany, Schenectady, Troy, Colonie and Clifton Park. We build small-business websites, custom web platforms, native iOS and Flutter mobile apps, and 24/7 AI voice agents. Bilingual English and Spanish. Remote service across the United States including Florida, New York, New Jersey, and Massachusetts.',
+    'Software and AI partner for small and medium-sized businesses, based in Miami, FL and New York\u2019s Capital Region. We build websites that show up on Google, custom tools that replace spreadsheets, iPhone and Android apps, and 24/7 AI receptionists and automations for booking and follow-ups. A senior engineer directs a team of AI coding agents; every change is tested and reviewed before it ships. Bilingual English and Spanish. Remote service across the United States including Florida, New York, New Jersey, and Massachusetts.',
 
   address: {
     streetAddress: '2125 Biscayne Blvd, Ste 204',
@@ -110,7 +110,7 @@ export const business = {
     familyName: 'Ramos',
     jobTitle: 'Founder & Lead Software Engineer',
     /** Credentials only — consumers append their own framing sentence. */
-    bio: 'a Latino software engineer with 10+ years of experience and dual degrees in Computer Science and Information Technology',
+    bio: 'a Latino software engineer with 10+ years of experience and two associate degrees, in Computer Science and in Information Technology',
     url: 'https://shenderramos.com',
     alumniOf: 'Northern Essex Community College',
     /**
@@ -124,12 +124,13 @@ export const business = {
     sameAs: ['https://shenderramos.com'],
   },
 
-  pricing: 'Small-business websites and automation from $2,500; custom applications $15,000–$250,000+; ongoing partnership retainers available',
+  pricing: 'Fixed-scope quotes after a free discovery call, sized for small and medium-sized businesses; ongoing partnership retainers available',
 
   differentiators: [
     'Bilingual English & Spanish service',
     'Latino-owned / Hispanic-owned technology company',
-    'Founder is a hands-on senior engineer (not a sales agency)',
+    'Founder is a hands-on senior engineer (not a sales agency) who directs AI coding agents and reviews every change',
+    'On custom builds, clients own their code, domains and accounts',
     'Remote-first delivery across the United States',
     'Free 15-minute discovery call, response within 24 hours',
   ],
@@ -140,7 +141,7 @@ export const business = {
     { label: 'Backend', items: 'Java Spring Boot, Node.js' },
     { label: 'Database', items: 'PostgreSQL, Firebase' },
     { label: 'Cloud', items: 'AWS (EC2, RDS, S3, Lambda)' },
-    { label: 'AI', items: 'OpenAI APIs, AI voice agents, automation workflows' },
+    { label: 'AI', items: 'AI receptionists and voice agents, automation workflows, OpenAI APIs' },
     { label: 'Mobile monetization', items: 'RevenueCat, AdMob' },
   ],
 

@@ -11,13 +11,20 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Tech Build Dreams LLC — Miami Software Development, Mobile Apps & AI Voice Agents',
-    template: '%s | Tech Build Dreams LLC',
+    default: 'Miami Software Development for Small Business | Tech Build Dreams',
+    template: '%s | Tech Build Dreams',
   },
   description:
-    'Tech Build Dreams LLC — Miami software development and AI agency. We build custom web platforms, native iOS & Flutter mobile apps, and 24/7 AI voice agents for businesses in Miami FL, Albany NY, Bronx NY, Massachusetts, and remote across the United States. Bilingual English & Spanish.',
+    'Miami software development for small businesses: websites, apps, AI receptionists and automations. Written quotes, English or Spanish. Miami & Albany, NY.',
   keywords: [
+    'AI receptionist for small business',
+    'never miss a call small business',
+    'small business website that shows up on Google',
+    'automate booking and follow-ups',
+    'custom app for my business',
+    'small business tech help',
     'Miami software development',
+    'Albany NY software developer',
     'AI voice agent for small business',
     'custom web development Miami',
     'iOS app developer Florida',
@@ -26,7 +33,6 @@ export const metadata: Metadata = {
     'Latino-owned software company',
     'bilingual software development English Spanish',
     'fractional CTO Miami',
-    'SaaS development',
     'AI automation small business',
     'remote software development USA',
   ],
@@ -48,24 +54,24 @@ export const metadata: Metadata = {
     type: 'website',
     url: SITE_URL,
     siteName: 'Tech Build Dreams LLC',
-    title: 'Tech Build Dreams LLC — Miami Software Development, Mobile Apps & AI Voice Agents',
+    title: 'Miami Software Development for Small Business | Tech Build Dreams',
     description:
-      'Custom web platforms, iOS & Flutter mobile apps, and 24/7 AI voice agents. Miami-based, serving Florida, New York, Massachusetts, and remote across the US. Bilingual English & Spanish service.',
+      'Miami software development for small businesses: websites, apps, AI receptionists and automations. Written quotes, English or Spanish. Miami & Albany, NY.',
     locale: 'en_US',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Tech Build Dreams LLC — Technology That Builds Dreams',
+        alt: 'Tech Build Dreams — Miami software development for small businesses',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tech Build Dreams LLC — Miami Software Development & AI Voice Agents',
+    title: 'Miami Software Development for Small Business | Tech Build Dreams',
     description:
-      'Custom web platforms, iOS & Flutter mobile apps, and 24/7 AI voice agents for businesses ready to scale. Bilingual English & Spanish. Miami-based, US-wide remote.',
+      'Never miss a call, get found on Google, and get out of spreadsheets. Websites, apps, AI receptionists and automations for small businesses. English or Spanish.',
     images: ['/og-image.png'],
   },
   manifest: '/manifest.json',

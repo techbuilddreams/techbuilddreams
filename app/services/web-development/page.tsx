@@ -3,14 +3,14 @@ import { ServicePage } from '@/components/templates/ServicePage';
 import { SERVICE_IDS } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Custom Web Development Miami — React & Spring Boot SaaS Platforms',
+  title: 'Custom Software Development in Miami & Albany',
   description:
-    'Custom web application and SaaS development in Miami. React frontends, Spring Boot APIs, AWS infrastructure. Built for founders scaling from MVP to enterprise. Bilingual English & Spanish.',
+    'Outdated website or drowning in spreadsheets? Custom software, websites and web apps for small businesses in Miami and Albany, NY. You own the code.',
   alternates: { canonical: '/services/web-development' },
   openGraph: {
-    title: 'Custom Web Development Miami — React & Spring Boot SaaS Platforms',
+    title: 'Custom Software Development in Miami & Albany | Tech Build Dreams',
     description:
-      'Custom web application and SaaS development in Miami. React frontends, Spring Boot APIs, AWS infrastructure.',
+      'Websites that show up on Google, customer portals, and custom tools that replace spreadsheets. You own the code.',
     url: '/services/web-development',
   },
 };
@@ -20,44 +20,42 @@ export default function WebDevelopmentPage() {
     <ServicePage
       slug="web-development"
       title="Custom Web Development"
-      h1="Custom Web Development for Founders Who Are Done with Templates"
+      h1="Websites and Custom Tools for Businesses Outgrowing Spreadsheets"
       tagline="Custom Web Development · Miami"
-      intro="We design and build custom web applications, SaaS platforms, and internal tools for founders and teams that need software tailored to their business — not stretched to fit a template. React frontends, Spring Boot APIs, PostgreSQL, and AWS infrastructure, delivered by a senior engineer who has shipped this stack for 10+ years."
-      audience="Startups going from MVP to revenue, agencies needing a senior development partner, and growing small-to-medium businesses replacing brittle spreadsheets, no-code stacks, or aging internal tools with software that actually scales."
+      intro="Your website is outdated and doesn't show up on Google. Your team re-types the same order into three spreadsheets. We build business websites, customer portals, online booking, and internal tools that fit how your business actually runs — not stretched to fit a template. A senior engineer with 10+ years of experience directs a team of AI coding agents, and every change is tested and reviewed before it ships. Under the hood: React, Spring Boot, PostgreSQL, and AWS — proven tools any good developer can maintain."
+      audience="Small and medium-sized businesses — restaurants, contractors, clinics, shops, and service companies — replacing an outdated website, brittle spreadsheets, a no-code setup that hit its limits, or a half-finished app from a developer who disappeared or an AI tool that broke."
       features={[
         'Custom React + TypeScript web applications',
         'Spring Boot REST APIs with PostgreSQL',
         'AWS infrastructure (EC2, RDS, S3, Lambda) and CI/CD pipelines',
         'Customer portals, dashboards, and internal admin tools',
-        'Enterprise integrations: Stripe, Twilio, Salesforce, HubSpot, custom APIs',
+        'Connections to the tools you already use: Stripe, Twilio, HubSpot, Salesforce, Google Sheets, custom APIs',
         'Authentication, role-based access, and audit logging',
         'Bilingual (English & Spanish) project communication',
       ]}
       outcomes={[
         'A production-ready platform you actually own — not locked into a no-code vendor',
-        'Architecture that scales from your first paying customer to thousands',
+        'Software that keeps working as you add customers, staff, and locations',
         'Direct access to the senior engineer building it (no account-manager layer)',
         'Documented codebase and handoff so your in-house team can take over later',
       ]}
-      timeline="8–16 weeks from discovery to launch"
-      priceRange="$15,000 – $250,000+ depending on scope"
+      engagement="Discovery call, written scope, then milestones you approve"
+      investment="Written quote after a free discovery call, sized for small and medium-sized businesses"
       schema={{
         id: SERVICE_IDS.web,
         name: 'Custom Web Development',
         url: '/services/web-development',
         description:
-          'Custom React SaaS platforms, web applications, and Spring Boot APIs for startups and growing businesses. Typical timeline 8–16 weeks.',
+          'Business websites, customer portals, and custom web tools for small and medium-sized businesses.',
         serviceType: 'Custom Software Development',
         category: 'Web Development',
-        audience: 'Startups, SaaS founders, scaling small and medium businesses',
-        priceMin: 15000,
-        priceMax: 250000,
+        audience: 'Small and medium-sized businesses',
       }}
       faqs={[
         {
           question: 'Do you build websites or web applications?',
           answer:
-            'Both. This page covers web applications — interactive software that users log into, like SaaS platforms, customer portals, and internal tools. We also build fast, mobile-first business websites for local service companies, starting around $2,500, on the same React and Next.js stack so you own the code either way. The one thing we do not do is patch and re-theme old WordPress installs.',
+            'Both. This page covers web applications — interactive software that users log into, like SaaS platforms, customer portals, and internal tools. We also build fast, mobile-first business websites for local service companies on the same React and Next.js stack so you own the code either way. The one thing we do not do is patch and re-theme old WordPress installs.',
         },
         {
           question: 'What tech stack do you use and why?',
@@ -65,9 +63,9 @@ export default function WebDevelopmentPage() {
             'Default: React + TypeScript on the frontend, Spring Boot (Java) on the backend, PostgreSQL for the database, and AWS for hosting. This stack is mature, well-staffed in the talent market, and battle-tested at scale. We pick alternatives (Next.js, Node, Firebase) when a project genuinely benefits from them, not because they are trendy.',
         },
         {
-          question: 'Can you take over a project another developer started?',
+          question: 'My developer disappeared (or my AI-built app broke). Can you take it over?',
           answer:
-            'Yes — most of our engagements include a code audit phase. We will assess what is salvageable, what needs to be rewritten, and give you an honest path forward with a fixed-scope rebuild quote.',
+            'Yes. We start with a code audit: what is salvageable, what needs to be rewritten, and who actually holds your domain, hosting, and code accounts. Then you get an honest path forward and a fixed quote. This includes apps started with AI builders that worked in the demo and broke with real customers.',
         },
         {
           question: 'Do you sign NDAs and IP-assignment agreements?',
@@ -77,8 +75,8 @@ export default function WebDevelopmentPage() {
       ]}
       related={[
         { href: '/services/mobile-apps', label: 'Mobile App Development' },
-        { href: '/services/ai-voice-agents', label: 'AI Voice Agents' },
-        { href: '/services/fractional-cto', label: 'Fractional CTO' },
+        { href: '/services/ai-voice-agents', label: 'AI Receptionist & Automation' },
+        { href: '/services/fractional-cto', label: 'Fractional CTO & Tech Partner' },
       ]}
     />
   );

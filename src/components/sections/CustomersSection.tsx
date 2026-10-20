@@ -12,7 +12,7 @@ export const CustomersSection: React.FC = () => (
     <Container>
       <SectionHeader
         title="Our Work in Action"
-        subtitle="Discover the exceptional digital experiences we've crafted for visionary clients who trusted us to bring their dreams to life."
+        subtitle="Real websites, apps, and tools we've designed and shipped — live today, used by real customers."
       />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

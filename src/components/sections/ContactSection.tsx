@@ -18,7 +18,7 @@ export const ContactSection: React.FC = () => {
             Ready to Start Your Project?
           </h2>
           <p className="text-lg text-gray-600">
-            Tell us about your dream and we'll respond within 24 hours with next steps.
+            Tell us what's slowing your business down and we'll respond within 24 hours with next steps.
           </p>
         </div>
 

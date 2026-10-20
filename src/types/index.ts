@@ -4,7 +4,7 @@ export interface Service {
   description: string;
   features: string[];
   href: string;
-  timeline: string;
+  badge: string;
 }
 
 export interface Value {

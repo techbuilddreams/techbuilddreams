@@ -6,14 +6,14 @@ import { SERVICE_IDS } from '@/lib/seo';
 import { breadcrumbSchema, servicesListSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Software, Mobile App & AI Services — Tech Build Dreams',
+  title: 'Software & AI Services for Small Business',
   description:
-    'Tech Build Dreams offers custom web development, native iOS and Flutter mobile apps, 24/7 AI voice agents, and fractional CTO services. Miami-based, bilingual (EN/ES), remote across the United States.',
+    'Websites, apps, AI receptionists and a tech partner for small and medium-sized businesses in Miami, Albany and across the US. English or Spanish.',
   alternates: { canonical: '/services' },
   openGraph: {
-    title: 'Software, Mobile App & AI Services — Tech Build Dreams',
+    title: 'Software & AI Services for Small Business | Tech Build Dreams',
     description:
-      'Custom web platforms, mobile apps, AI voice agents, and fractional CTO services — Miami-based, US-wide.',
+      'Websites, apps, AI receptionists, automations, and a senior tech partner for small businesses — Miami, Albany NY, and US-wide.',
     url: '/services',
   },
 };
@@ -29,7 +29,7 @@ const servicesList = servicesListSchema([
     name: 'Custom Web Development',
     url: '/services/web-development',
     description:
-      'Custom React web platforms, SaaS applications, and Spring Boot APIs — built to scale from MVP to enterprise.',
+      'Business websites that show up on Google, customer portals, and custom tools that replace spreadsheets — for small and medium-sized businesses.',
   },
   {
     id: SERVICE_IDS.mobile,
@@ -40,17 +40,17 @@ const servicesList = servicesListSchema([
   },
   {
     id: SERVICE_IDS.aiVoice,
-    name: 'AI Voice Agents & Automation',
+    name: 'AI Receptionist & Automation',
     url: '/services/ai-voice-agents',
     description:
-      '24/7 AI voice agents that answer calls, capture leads, schedule appointments, and qualify customers in English and Spanish.',
+      '24/7 AI receptionists that answer calls, capture leads, book appointments, and send follow-ups in English and Spanish.',
   },
   {
     id: SERVICE_IDS.fractionalCto,
-    name: 'Fractional CTO & Strategic Technology Partnership',
+    name: 'Fractional CTO & Tech Partner',
     url: '/services/fractional-cto',
     description:
-      'Fractional CTO and ongoing technology leadership for founders and executives scaling beyond MVP, with bilingual (EN/ES) executive support.',
+      'A senior tech partner you can call before you sign a vendor contract, hire a developer, or replace a system — and when your tech breaks. Fractional CTO help for small and medium-sized businesses, in English or Spanish.',
   },
 ]);
 
@@ -69,15 +69,15 @@ export default function ServicesPage() {
       <section className="pt-20 pb-12 bg-gradient-to-b from-blue-50 to-white">
         <Container maxWidth="4xl" className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Software, Mobile App &amp; AI Services
+            Tech Help for Small Businesses: Websites, Apps &amp; AI
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             <strong className="text-gray-900">
-              Tech Build Dreams builds custom web platforms, native mobile apps, 24/7 AI voice
-              agents, and provides fractional CTO leadership
+              Tech Build Dreams builds websites, custom tools, mobile apps, and AI receptionists
+              and automations, and stays on as your senior tech partner
             </strong>{' '}
-            for small businesses and growing teams. Miami-based, bilingual (English / Spanish),
-            and delivered remotely across the United States.
+            for small and medium-sized businesses. On-site in Miami and New York&rsquo;s Capital
+            Region, remote across the United States, in English or Spanish.
           </p>
         </Container>
       </section>

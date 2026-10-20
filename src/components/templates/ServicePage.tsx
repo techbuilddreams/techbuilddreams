@@ -28,8 +28,8 @@ export interface ServicePageProps {
   audience: string;
   features: string[];
   outcomes: string[];
-  timeline: string;
-  priceRange: string;
+  engagement: string;
+  investment: string;
   schema: ServicePageSchemaInput;
   faqs?: ServiceFAQ[];
   related?: RelatedService[];
@@ -44,8 +44,8 @@ export const ServicePage: React.FC<ServicePageProps> = ({
   audience,
   features,
   outcomes,
-  timeline,
-  priceRange,
+  engagement,
+  investment,
   schema,
   faqs = [],
   related = [],
@@ -131,8 +131,8 @@ export const ServicePage: React.FC<ServicePageProps> = ({
                 <Clock className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900">Typical timeline</h3>
-                <p className="text-gray-600">{timeline}</p>
+                <h3 className="font-semibold text-gray-900">How it works</h3>
+                <p className="text-gray-600">{engagement}</p>
               </div>
             </div>
             <div className="bg-white p-6 rounded-xl flex items-center">
@@ -140,8 +140,8 @@ export const ServicePage: React.FC<ServicePageProps> = ({
                 <DollarSign className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900">Investment range</h3>
-                <p className="text-gray-600">{priceRange}</p>
+                <h3 className="font-semibold text-gray-900">Investment</h3>
+                <p className="text-gray-600">{investment}</p>
               </div>
             </div>
           </div>
