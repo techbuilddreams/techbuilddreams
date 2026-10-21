@@ -124,7 +124,7 @@ export const business = {
     sameAs: ['https://shenderramos.com'],
   },
 
-  pricing: 'Fixed-scope quotes after a free discovery call, sized for small and medium-sized businesses; ongoing partnership retainers available',
+  pricing: 'Written quotes after a free discovery call, sized for small and medium-sized businesses; ongoing partnership retainers available',
 
   differentiators: [
     'Bilingual English & Spanish service',
